@@ -7,8 +7,8 @@
 # 井号后面的文字是说明文档，不会被程序读取。
 
 # 描述/签名
-name: Hyperzsb
-description: Hyperzsb - 张少博
+name: Hyperzsb's Ideas
+description: 抓住思考的瞬间
 
 # 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）
 url: hyperzsb.tech
@@ -33,12 +33,12 @@ favicon: https://hyperzsb.tech/images/favicon.png
 navigation:
   - name: 首页
     url: /
-  - name: 关于
-    url: /about
   - name: 归档
     url: /archive
   - name: 标签
     url: /tags
+  - name: 关于
+    url: /about
 
 # 每页的文章数
 paginate: 8

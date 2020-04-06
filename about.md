@@ -1,7 +1,11 @@
 ---
 layout: page
-title: 关于
+title: About - 关于
 permalink: /about/
 ---
 
-这是一个关于页面，请编辑about.md以介绍你的博客。
+**Hyperzsb， 张少博的临时博客。**
+
+**基于[LOFFER](https://fromendworld.github.io/LOFFER/document/)构建**
+
+***Continually updating...***
