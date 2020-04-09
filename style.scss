@@ -430,7 +430,7 @@ nav {
 
 .wrapper-content {
   float: right;
-  width: 75%;
+  width: 76.5%;
 
   @include mobile {
     float: none;
@@ -547,6 +547,10 @@ nav {
     display: block;
     padding-bottom: 0.6em;
     border-bottom: 3px double $divider-color;
+  }
+
+  li {
+    font-size: 0.87rem;
   }
 
   li:before{

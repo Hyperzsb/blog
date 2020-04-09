@@ -37,6 +37,8 @@ navigation:
     url: /archive
   - name: 标签
     url: /tags
+  - name: 收藏
+    url: /collections
   - name: 关于
     url: /about
 
