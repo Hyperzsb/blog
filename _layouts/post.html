@@ -3,9 +3,11 @@ layout: default
 ---
 
 <article class="posts">
+
   <h1>{{ page.title }}</h1>
 
   <div clsss="meta">
+
     <span class="author">
       {{ page.author }}
     </span>
@@ -16,13 +18,10 @@ layout: default
 
     <ul class="tag">
       {% for tag in page.tags %}
-      <li>
-        <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-          {{ tag }}
-        </a>
-      </li>
+      <li><a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">{{ tag }}</a></li>
       {% endfor %}
     </ul>
+
   </div>
 
   <div class="entry">
@@ -31,9 +30,11 @@ layout: default
 
   {% include disqus.html %}
   {% include gitalk.html %}
+
 </article>
 
 <div class="pagination">
+
   {% if page.previous.url %}
     <span class="prev" >
       <a href="{{ page.previous.url }}">
@@ -41,6 +42,7 @@ layout: default
       </a>
     </span>
   {% endif %}
+
   {% if page.next.url %}
     <span class="next" >
       <a href="{{ page.next.url }}">
@@ -48,4 +50,5 @@ layout: default
       </a>
     </span>
   {% endif %}
+  
 </div>

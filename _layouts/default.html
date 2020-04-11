@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+
   {% include head.html %}
+
   <body>
+
     {% include nav.html %}
 
     {% if page.toc==true %}
@@ -17,6 +20,7 @@
     </div>
 
     {% include analytics.html %}
+
   </body>
 
   {% if page.toc==true %}
@@ -24,11 +28,11 @@
     document.getElementById("main").classList.add("withtoc");
   </script>
   {% endif %}
-
+  
   <div class="wrapper-footer-mobile">
     <footer class="footer">
       {% include footer.html %}
     </footer>
-
+  </div>
 
 </html>
