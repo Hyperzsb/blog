@@ -2,10 +2,6 @@
 # 这个文档包含了本博客的设定信息，你可以编辑它来个性化自己的博客，
 #
 
-# 你的博客名称，请用你想要的博客名替换“LOFFER”，以下修改都可类似处理
-# 注意，“name: LOFFER”，冒号后面的空格不可以省略。
-# 井号后面的文字是说明文档，不会被程序读取。
-
 # 描述/签名
 name: Hyperzsb's Ideas
 description: 抓住思考的瞬间
@@ -17,7 +13,6 @@ url: hyperzsb.tech
 # 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
 # 那么就写成 "/repository-name"
 baseurl: /
-
 
 #
 # 下面的设定都是可选的
@@ -49,12 +44,12 @@ paginate: 8
 excerpt_separator: <!-- more -->
 
 # 你的社交网络链接，它们会作为图标出现在你的网站页脚中，可选填写
-footer-links: 
-  email: hyperzsb@outlook.com 
+footer-links:
+  email: hyperzsb@outlook.com
   facebook: # https://www.facebook.com/<>
   github: Hyperzsb # https://github.com/<>
   stackoverflow: # http://stackoverflow.com/<>
-  twitter: # https://www.twitter.com/<your_twitter_username> 
+  twitter: # https://www.twitter.com/<your_twitter_username>
 
 # 站点页脚的文字
 footer-text: Copyright (c) 2020 Hyperzsb
@@ -64,7 +59,7 @@ footer-text: Copyright (c) 2020 Hyperzsb
 #
 
 # 输入Disqus shortname，即可添加评论区
-disqus:  #shortname
+disqus: #shortname
 
 # 输入Gitalk相关设定，即可添加评论区，具体请看教程
 gitalk:
@@ -75,7 +70,6 @@ gitalk:
 
 # 输入Google Analytics web tracking code
 google_analytics:
-
 
 #
 # !! 以下所有设置都不需要更改 !!

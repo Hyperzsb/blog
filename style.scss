@@ -1,19 +1,13 @@
 ---
 ---
 
-//
-// IMPORTS
-//
-
 @import "reset";
 @import "open-color";
 @import "variables";
 
-// Syntax highlighting @import is at the bottom of this file
-
-/**************/
-/* BASE RULES */
-/**************/
+/**
+ * Base Rules
+ */
 
 html {
   font-size: $base-font-size;
@@ -48,6 +42,7 @@ h1, h2, h3, h5 {
 
 h1 {
   font-size: 30px;
+
   a {
     color: inherit;
   }
@@ -175,7 +170,6 @@ li {
   }
 }
 
-// Definition list
 dt {
   float: left;
   width: $dt-width;
@@ -201,7 +195,6 @@ dd {
   }
 }
 
-// Table
 table {
   margin-bottom: 1rem;
   width: 100%;
@@ -219,7 +212,6 @@ tbody tr:nth-child(odd) th {
   background-color: $table-background-color;
 }
 
-// Blockquote
 blockquote {
   font-weight: 300;
   padding: 0 0 0 1.4rem;
@@ -235,7 +227,6 @@ blockquote {
   }
 }
 
-// Footnote
 a.footnote {
   &,
   .post p &,
@@ -262,7 +253,6 @@ a.footnote {
   font-size: $small-font-size;
 }
 
-// Image
 img {
   display: block;
   max-width: 100%;
@@ -277,11 +267,12 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-//  color: $selection-color;
+  //  color: $selection-color;
   background: $selection-background-color;
 }
+
 ::selection {
-//  color: $selection-color;
+  //  color: $selection-color;
   background: $selection-background-color;
 }
 
@@ -289,12 +280,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 // Alignment
@@ -311,24 +302,21 @@ img {
   text-align: right
 }
 
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
+/**
+ * Layout & Section
+ */
 
-//
-// .sidebar
-//
-
+// Sidebar
 .wrapper-sidebar {
   width: 25%;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-color: $background-color;
-	height: 100%;
-	top: 0;
-	left:0;
-	position: fixed;
-	z-index: 4;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: $background-color;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 4;
   border-right: 1px solid $divider-color;
 
   @include mobile {
@@ -350,7 +338,7 @@ img {
 }
 
 .site-info {
-  text-align:center;
+  text-align: center;
   margin: 100px auto 0;
 
   @include mobile {
@@ -360,7 +348,7 @@ img {
   }
 
   .site-avatar {
-    margin:0 auto;
+    margin: 0 auto;
     display: block;
     max-width: 200px;
     max-height: 200px;
@@ -397,8 +385,8 @@ img {
   }
 }
 
-.navlist{
-  text-align:center;
+.navlist {
+  text-align: center;
 }
 
 nav {
@@ -426,8 +414,7 @@ nav {
   }
 }
 
-// content
-
+// Content
 .wrapper-content {
   float: right;
   width: 76.5%;
@@ -439,8 +426,7 @@ nav {
 }
 
 // Posts
-
-.posts{
+.posts {
 
   .tag {
     display: inline;
@@ -464,7 +450,7 @@ nav {
 
         &:hover {
           color: $link-color;
-          background-color:$link-bghv-color;
+          background-color: $link-bghv-color;
         }
       }
     }
@@ -496,9 +482,9 @@ nav {
   margin-right: 4px;
 }
 
-.author{
-  font-weight:700;
-  font-size:$small-font-size;
+.author {
+  font-weight: 700;
+  font-size: $small-font-size;
   color: $base-lighten-color;
   margin-right: 4px;
 }
@@ -520,16 +506,7 @@ nav {
   }
 }
 
-.page {
-//  margin: 40px;
-
-  @include mobile {
-//    margin: 24px;
-  }
-}
-
 // TOC
-
 .toc {
   width: 240px;
   height: 100%;
@@ -538,9 +515,9 @@ nav {
   z-index: 4;
   padding: 60px 20px 0 20px;
   overflow-y: auto;
-  
-  &:before{
-    content:"Contents - 目录";
+
+  &:before {
+    content: "Contents - 目录";
     margin: 0 0 1em 1em;
     font-weight: 700;
     font-size: 1.2em;
@@ -553,23 +530,22 @@ nav {
     font-size: 0.87rem;
   }
 
-  li:before{
-    content:"";
+  li:before {
+    content: "";
   }
 
-  @include mobile{
-    display:none;
+  @include mobile {
+    display: none;
   }
 }
 
-@media screen and (max-width:2200px) and (min-width:1200px){
-  .withtoc{
+@media screen and (max-width: 2200px) and (min-width: 1200px) {
+  .withtoc {
     padding-left: 260px;
   }
 }
 
-// pagination
-
+// Pagination
 .pagination {
   border-top: 1px solid $divider-color;
   font-weight: 300;
@@ -585,6 +561,7 @@ nav {
   > .prev {
     float: left;
     width: 50%;
+
     a {
       color: $base-lighten-color;
       border: 1px solid $divider-color;
@@ -603,6 +580,7 @@ nav {
     float: right;
     text-align: right;
     width: 50%;
+
     a {
       color: $base-lighten-color;
       border: 1px solid $divider-color;
@@ -623,6 +601,7 @@ nav {
   a {
     color: $base-color;
   }
+
   time {
     color: $base-lighten-color;
     font-size: $small-font-size;
@@ -672,6 +651,7 @@ nav {
   a {
     color: $base-color;
   }
+
   time {
     color: $base-lighten-color;
     font-size: $small-font-size;
@@ -681,17 +661,16 @@ nav {
 }
 
 
-
 // Footer
 .wrapper-footer-desktop {
   margin-top: 50px;
   border-top: 1px solid $footer-border-color;
   background-color: $footer-background-color;
   position: absolute;
-  clear:both;
-  width:100%;
-  bottom:0;
-  
+  clear: both;
+  width: 100%;
+  bottom: 0;
+
   @include mobile {
     display: none;
   }
@@ -700,7 +679,7 @@ nav {
 
 .wrapper-footer-mobile {
   display: none;
-  
+
   @include mobile {
     display: block;
     width: 100%;
@@ -734,7 +713,7 @@ footer {
       height: 20px;
       width: 20px;
       fill: $base-lighten-color;
-      
+
       &:hover {
         fill: $link-lighten-color;
       }
@@ -754,8 +733,10 @@ footer {
   }
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+/**
+ * Settled on moving the import of syntax highlighting to the bottom of the CSS
+ * ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+ */
 @import "highlights";
 @import "gitalk";
 

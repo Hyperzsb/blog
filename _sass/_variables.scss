@@ -1,17 +1,14 @@
+/**
+ * Variables
+ */
 
-//
-// VARIABLES
-//
+/**
+ * 颜色使用opencolor https://yeun.github.io/open-color/
+ * 主题色可选 red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow
+ * 默认为teal，如果需要更换，可以直接将teal并替换成你想要的颜色
+ */
 
-// 颜色使用opencolor https://yeun.github.io/open-color/
-// 主题色可选 red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow
-// 默认为teal，如果需要更换，可以直接将teal并替换成你想要的颜色，例如，查找teal，替换indigo，全部替换，保存，push，完成！
-
-
-// Colors
 $blue: $oc-teal-8;
-
-// Grays
 $black: #000;
 $darkerGray: #222;
 $darkGray: #333;
@@ -20,13 +17,33 @@ $lightGray: #eee;
 $white: #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$helvetica: Helvetica,
+Arial,
+sans-serif;
+$helveticaNeue: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+$georgia: Georgia,
+serif;
 
 // Fonts
-$base-font: "Noto Serif","PT Serif",source-han-serif-sc, "Source Han Serif SC", "Source Han Serif CN", "Source Han Serif TC", "Source Han Serif TW", "Source Han Serif","Songti SC", SimSon, serif;
-$code-font: 'Menlo', 'Courier New', 'Monaco', 'Spoqa Han Sans', monospace;
+$base-font: "Noto Serif",
+"PT Serif",
+source-han-serif-sc,
+"Source Han Serif SC",
+"Source Han Serif CN",
+"Source Han Serif TC",
+"Source Han Serif TW",
+"Source Han Serif",
+"Songti SC",
+SimSon,
+serif;
+$code-font: 'Menlo',
+'Courier New',
+'Monaco',
+'Spoqa Han Sans',
+monospace;
 
 // Font sizes
 $base-font-size: 16px;
@@ -45,7 +62,8 @@ $link-color: $oc-teal-8;
 $link-lighten-color: $oc-teal-6;
 $link-bghv-color: $oc-teal-0;
 $divider-color: $oc-gray-1;
-$divider-color-dark: $oc-gray-5;
+$divider-color-dark: $oc-gray-3;
+$divider-color-darker: $oc-grape-5;
 
 $error-color:$oc-red-8;
 
@@ -58,7 +76,6 @@ $blockquote-border-color: $oc-gray-3;
 $footnote-link-border-color: $oc-gray-1;
 $footnote-link-background-over-color: $oc-gray-1;
 
-// $selection-color: $oc-black;
 $selection-background-color: $oc-gray-3;
 
 $tag-index-label-background-color: $oc-gray-2;
