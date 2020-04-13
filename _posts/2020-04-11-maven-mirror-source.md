@@ -16,11 +16,7 @@ toc: true
 
 <!-- more -->
 
-
-
 ---
-
-
 
 ## 问题症状
 
@@ -34,11 +30,7 @@ Could not transfer artifact org.springframework.boot:spring-boot-starter-parent:
 
 （这里报错的问题其实应该是该版本Maven对应的默认源的默认传输协议为Http，而实际默认源的默认传输协议以迁移到Https上，且停止了对Http的支持，才导致无法下载依赖）
 
-
-
 ---
-
-
 
 ## 解决方法
 
@@ -64,18 +56,10 @@ Could not transfer artifact org.springframework.boot:spring-boot-starter-parent:
 
 Reimport Maven项目即可。
 
-
-
 ---
-
-
 
 ## 参考
 
 - **[IDEA中Maven依赖包下载不了的问题解决方案汇总](https://blog.csdn.net/jwcxs_m/article/details/80076909)**
 - **[IDEA里Maven依赖无法下载的解决办法](https://blog.csdn.net/weixin_36795183/article/details/79408167)**
-
-
-
----
 

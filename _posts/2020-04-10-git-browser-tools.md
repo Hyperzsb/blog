@@ -14,11 +14,7 @@ toc: true
 
 <!-- more -->
 
-
-
 ---
-
-
 
 ## SourceGraph
 
@@ -30,15 +26,9 @@ toc: true
 - 转到定义
 - 转到引用
 
-
-
 ![SourceGraph-1](https://hyperzsb-images.oss-cn-beijing.aliyuncs.com/blog/2020-04-10-git-browser-tools/SourceGraph-1.jpg)
 
-
-
 ![SourceGraph-2](https://hyperzsb-images.oss-cn-beijing.aliyuncs.com/blog/2020-04-10-git-browser-tools/SourceGraph-2.jpg)
-
-
 
 ### 支持平台
 
@@ -49,8 +39,6 @@ toc: true
 - Vim
 - Sublime
 - Atom
-
-
 
 ### 支持服务商
 
@@ -65,11 +53,7 @@ toc: true
 
 Chrome和Firefox均可直接搜索安装（Chrome需要科学上网）
 
-
-
 ---
-
-
 
 ## Octotree
 
@@ -90,34 +74,20 @@ Chrome和Firefox均可直接搜索安装（Chrome需要科学上网）
   - 多GitHub账户支持
   - 支持GitHub Enterprise
 
-
-
 ![Octotree-1](https://hyperzsb-images.oss-cn-beijing.aliyuncs.com/blog/2020-04-10-git-browser-tools/Octotree-1.jpg)
 
-
-
 ![Octotree-2](https://hyperzsb-images.oss-cn-beijing.aliyuncs.com/blog/2020-04-10-git-browser-tools/Octotree-2.jpg)
-
-
 
 ### 支持平台
 
 - Chrome
 - Firefox
 
-
-
 ### 支持服务商
 
 - GitHub
 
-
-
 ### 安装
 
 Chrome和Firefox均可直接搜索安装（Chrome需要科学上网）
-
-
-
----
 
