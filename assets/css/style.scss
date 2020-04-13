@@ -1,5 +1,5 @@
----
 --- 
+---
 @import "reset";
 @import "open-color";
 @import "variables";
@@ -748,6 +748,14 @@ footer {
       bottom: 0;
       left: 0;
     }
+  }
+}
+
+.footer-blank-block {
+  padding-top: 45px;
+  
+  @include mobile {
+    display: none;
   }
 }
 
