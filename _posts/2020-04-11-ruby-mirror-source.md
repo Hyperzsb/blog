@@ -16,11 +16,7 @@ toc: true
 
 <!-- more -->
 
-
-
 ---
-
-
 
 ## 方法
 
@@ -45,8 +41,6 @@ $ gem sources -l
 > https://gems.ruby-china.com/
 # 成功！
 ```
-
-
 
 ### 在`Gemfile`中进行修改
 
@@ -76,8 +70,6 @@ source "https://my_awesome_source.com" do
 end
 ```
 
-
-
 ## 常用Gem源
 
 - https://gems.ruby-china.com/
@@ -98,13 +90,7 @@ end
 
   > 之前的淘宝镜像源，但是已经不再维护了。
 
-
-
 ## 参考
 
 [1]. **[What is a Gemfile](https://tosbourn.com/what-is-the-gemfile/)** - 中译版 - **[Gemfile 详解](https://blog.csdn.net/efvn2008/article/details/48392047)**
-
-
-
----
 

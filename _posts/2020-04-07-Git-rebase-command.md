@@ -16,11 +16,7 @@ toc: true
 
 <!-- more -->
 
-
-
 ---
-
-
 
 ## git rebase \<dest_branch\> \<orig_branch\>
 
@@ -30,11 +26,7 @@ toc: true
 $ git rebase master feature
 ```
 
-
-
 ---
-
-
 
 ## git rebase -i \<HEAD\>
 
@@ -74,8 +66,6 @@ pick 098f802 Add 2020-04-07-Git-rebase-command.md
 
 根据提示，进行所需的命令操作
 
-
-
 ### pick
 
 Git将根据pick的顺序对提交进行重新排序
@@ -100,23 +90,15 @@ $ git rebase --abort
 
 取消此次变基操作
 
-
-
 ### squash
 
 Git将会把指定的提交合并到它的上一个提交中，以减少提交个数
-
-
 
 ### drop
 
 删除某次你认为不必要或产生重复的提交
 
-
-
 ---
-
-
 
 ## rebase合并
 
@@ -127,23 +109,15 @@ Git将会把指定的提交合并到它的上一个提交中，以减少提交�
 - 如果在变基的源分支上存在以此为基础的分支，你可能需要反过来对它进行变基<sup>[1]</sup>
 - **多用户情况下变基会产生很多问题**
 
-
-
 ### git reabse --preserve-merges \<dest_branch\> \<orig_branch\>
 
 在源分支上有若干合并记录的情况下，如果你想保存合并历史的拓扑结构，可以使用该命令进行操作
 
-
-
 ---
-
-
 
 ## rebase后push到远程仓引发冲突的解决方案
 
 由于rebase后本地分支通常会落后或异构于远程仓的分支，需要通过如下方式来解决这一问题
-
-
 
 ### git push --force origin \<branch\>
 
@@ -153,13 +127,6 @@ Git将会把指定的提交合并到它的上一个提交中，以减少提交�
 
 在这种情况下，可以考虑下面的方式
 
-
-
 ### git push --force-with-lease origin \<branch\>
 
 该命令在强制覆盖前会进行一次检查，如果有其他人在该分支上工作，提交会发出一个警告，此时可通过协商等方式进行解决，而非产生令他人不知情的变更
-
-
-
----
-
