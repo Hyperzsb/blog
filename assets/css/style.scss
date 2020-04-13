@@ -1,6 +1,5 @@
 ---
----
-
+--- 
 @import "reset";
 @import "open-color";
 @import "variables";
@@ -26,7 +25,12 @@ body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 2em;
   margin: 1em 0 16px;
   padding: 0;
@@ -36,7 +40,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1, h2, h3, h5 {
+h1,
+h2,
+h3,
+h5 {
   font-weight: bold;
 }
 
@@ -80,16 +87,19 @@ a {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: $link-lighten-color;
   }
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
 }
 
@@ -112,8 +122,9 @@ hr {
 // Yeun's list style
 // https://gist.github.com/yeun/d824fc7b04b756508f4b0143535cec30
 
-ol, ul {
-  > li {
+ol,
+ul {
+  >li {
     &:before {
       position: absolute;
       width: $li-bullets-width;
@@ -126,7 +137,7 @@ ol, ul {
 }
 
 ul {
-  > li:before {
+  >li:before {
     content: "\2022";
     padding-right: $ul-bullets-right-space;
     font-family: $ul-bullets-font;
@@ -138,7 +149,7 @@ ul {
 ol {
   counter-reset: section;
 
-  > li:before {
+  >li:before {
     counter-increment: section;
     content: counter(section) ".";
     padding-right: $ol-bullets-right-space;
@@ -148,22 +159,24 @@ ol {
   }
 }
 
-ol, ul {
-  > li {
+ol,
+ul {
+  >li {
     margin: 0 auto $li-bottom-space $li-bullets-width;
     line-height: $li-line-height;
 
-    > ol,
-    > ul {
+    >ol,
+    >ul {
       margin-top: $li-bottom-space;
     }
   }
 }
 
 li {
-  > ol,
-  > ul {
-    > li {
+
+  >ol,
+  >ul {
+    >li {
       font-size: ($li-child-size-ratio * 1em);
       margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
     }
@@ -202,7 +215,8 @@ table {
   border-collapse: collapse;
 }
 
-td, th {
+td,
+th {
   padding: .25rem .5rem;
   border: 1px solid $table-border-color;
 }
@@ -228,6 +242,7 @@ blockquote {
 }
 
 a.footnote {
+
   &,
   .post p &,
   .post ol &,
@@ -441,7 +456,7 @@ nav {
       display: inline;
       margin: 0;
 
-      > a {
+      >a {
         margin: 3px 3px 3px 0;
         padding: .5px 4px;
         color: $base-color;
@@ -457,12 +472,12 @@ nav {
   }
 }
 
-.posts > .post {
+.posts>.post {
   padding-bottom: 2em;
   border-bottom: 1px solid $divider-color;
 }
 
-.posts > .post:last-child {
+.posts>.post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
 }
@@ -558,7 +573,7 @@ nav {
     padding: 24px 0;
   }
 
-  > .prev {
+  >.prev {
     float: left;
     width: 50%;
 
@@ -568,7 +583,8 @@ nav {
       padding: 10px 20px;
       background: $background-color;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $link-lighten-color;
         border: 1px solid $link-lighten-color;
         background-color: $link-bghv-color;
@@ -576,7 +592,7 @@ nav {
     }
   }
 
-  > .next {
+  >.next {
     float: right;
     text-align: right;
     width: 50%;
@@ -587,7 +603,8 @@ nav {
       padding: 10px 20px;
       background: $background-color;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $link-lighten-color;
         border: 1px solid $link-lighten-color;
         background-color: $link-bghv-color;
@@ -611,18 +628,18 @@ nav {
 }
 
 // Tags
-.tags > .label {
-  > li:before {
+.tags>.label {
+  >li:before {
     content: "";
   }
 
-  > li {
+  >li {
     margin: 0;
     font-size: $small-font-size;
     font-weight: 300;
     display: inline;
 
-    > a {
+    >a {
       display: inline-block;
       margin: 1px;
       color: $base-color;
@@ -647,7 +664,7 @@ nav {
   }
 }
 
-.tags > .tag {
+.tags>.tag {
   a {
     color: $base-color;
   }
@@ -681,6 +698,7 @@ nav {
   display: none;
 
   @include mobile {
+    margin-top: 50px;
     display: block;
     width: 100%;
     border-top: 1px solid $footer-border-color;
@@ -739,5 +757,3 @@ footer {
  */
 @import "highlights";
 @import "gitalk";
-
-
