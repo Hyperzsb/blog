@@ -25,6 +25,16 @@ toc: true
   >
   > 在此只列出在使用的云服务商。
 
+  - **[Cloudflare](https://www.cloudflare.com/zh-cn/)**
+
+    > 大名鼎鼎的国际云服务提供商，涵盖CDN、DNS、负载均衡、网站优化、DDoS防护、DNSSEC、域名注册等加速及安全服务。
+    >
+    > 更为关键的是，很多功能对于免费用户来说也是开放的！譬如CDN、DNS等等。对于免费用户还提供基本的安全保障服务，极其良心。
+    >
+    > **由于某些原因暂且无法采用国内云服务商的CDN服务，本站通过Cloudflare进行全站加速。（由于使用国外节点，国内加速效果受限）**
+    >
+    > 同时对于大陆用户，Cloudflare也有专门的产品支持。
+
   - **[阿里云](https://www.aliyun.com/)**
 
     > 阿里在国内IT行业里的地位不言而喻，各类云产品的质量在同行中也是数一数二（除了有些小贵）
@@ -59,7 +69,7 @@ toc: true
 
 - **[Liquid](https://shopify.github.io/liquid/basics/introduction/)**
 
-  > Jekyll指定模板语言
+  > Jekyll指定模板语言。
 
 - **Java**
 
@@ -144,13 +154,13 @@ toc: true
 
 - **[Text to ASCII Art Generator](http://patorjk.com/software/taag/ )**
 
-  > 十分有趣的可以将字母、单词转换成各类ASCII符号图案的网站。制作软件Banner时常用。
+  > 可以将字母、单词转换成各类ASCII符号图案的网站。制作软件Banner和命令行LOGO时常用。
 
+- **[PlanetB Syntax Highlight Code](http://www.planetb.ca/syntax-highlight-word/)**
 
+  > 给原始代码添加Word可以使用的高亮样式，支持C/C++/C#、Java、JavaScript、Python、SQL、HTML等多种语言。
 
 ---
-
-
 
 ## 实用高质的博文
 
@@ -188,11 +198,7 @@ toc: true
 
 - **[网站IP地址怎么查询？！](https://cloud.tencent.com/developer/article/1577791)**
 
-
-
 ---
-
-
 
 ## 精彩耐玩的游戏
 
@@ -200,11 +206,7 @@ toc: true
 - **[Grand Theft Auto V - 侠盗猎车手5](https://www.rockstargames.com/V/)**
 - **[Red Dead Redemption II - 荒野大镖客2](https://www.rockstargames.com/reddeadredemption2/)**
 
-
-
 ---
-
-
 
 ## 获益匪浅的书籍
 
@@ -212,20 +214,11 @@ toc: true
 - **《Spring学习指南》 - [印度] J. Sharma, Ashish Sarin**
 - **《Docker实战》 - [美] Jeff Nickoloff**
 
-
-
 ---
 
- 
-
-## 引人入胜的影片
+ ## 引人入胜的影片
 
 - **《黑客帝国》**
 - **《盗梦空间》**
 - **《守望者》**
 - **《银翼杀手2049》**
-
-
-
----
-
