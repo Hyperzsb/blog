@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: collections_page
 title: Collections - 收藏
 comments: false
 toc: true
@@ -216,7 +216,7 @@ toc: true
 
 ---
 
- ## 引人入胜的影片
+## 引人入胜的影片
 
 - **《黑客帝国》**
 - **《盗梦空间》**
