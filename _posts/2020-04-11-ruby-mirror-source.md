@@ -42,7 +42,7 @@ $ gem sources -l
 # 成功！
 ```
 
-### 在`Gemfile`中进行修改
+### 在Gemfile中进行修改
 
 ```ruby
 # 一般的默认源
@@ -59,7 +59,7 @@ source "https://gems.ruby-china.com/"
 
 - 如果有，就先使用这个源。如果你在设置`gem`的时候有使用source, path或者git依赖的话，`Bundler`将会先在这些地方找，然后再去其他地方寻找。
 
-- 如果没有被显示设置的话，`Bundler`将会依照你`Gemfile`里面定义的源的顺序来找。如果一个`gem`能够在多个源里面被找到的话（虽然这是极为罕见的，因为你最好只定义一个源），你将会得到一个warning来提示你哪个源被使用了。<sup>[1]</sup>>
+- 如果没有被显示设置的话，`Bundler`将会依照你`Gemfile`里面定义的源的顺序来找。如果一个`gem`能够在多个源里面被找到的话（虽然这是极为罕见的，因为你最好只定义一个源），你将会得到一个warning来提示你哪个源被使用了。<sup>[1]</sup>
 
 譬如这样：
 
@@ -69,6 +69,8 @@ source "https://my_awesome_source.com" do
   gem "my_other_gem"
 end
 ```
+
+---
 
 ## 常用Gem源
 
@@ -89,6 +91,8 @@ end
 - http://ruby.taobao.org/
 
   > 之前的淘宝镜像源，但是已经不再维护了。
+
+---
 
 ## 参考
 
