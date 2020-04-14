@@ -570,7 +570,7 @@ nav {
 
   @include mobile {
     font-size: $small-font-size;
-    padding: 24px 0;
+    padding: 27px 0 20px;
   }
 
   >.prev {
@@ -698,7 +698,7 @@ nav {
   display: none;
 
   @include mobile {
-    margin-top: 50px;
+    margin-top: 0;
     display: block;
     width: 100%;
     border-top: 1px solid $footer-border-color;
@@ -753,10 +753,6 @@ footer {
 
 .footer-blank-block {
   padding-top: 45px;
-  
-  @include mobile {
-    display: none;
-  }
 }
 
 /**
