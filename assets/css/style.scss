@@ -25,12 +25,7 @@ body {
   width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   line-height: 2em;
   margin: 1em 0 16px;
   padding: 0;
@@ -40,19 +35,12 @@ h6 {
   }
 }
 
-h1,
-h2,
-h3,
-h5 {
+h1, h2, h3, h5 {
   font-weight: bold;
 }
 
 h1 {
   font-size: 30px;
-
-  a {
-    color: inherit;
-  }
 }
 
 h2 {
@@ -93,8 +81,7 @@ a {
   }
 }
 
-em,
-i {
+em, i {
   font-style: italic;
 }
 
@@ -122,8 +109,7 @@ hr {
 // Yeun's list style
 // https://gist.github.com/yeun/d824fc7b04b756508f4b0143535cec30
 
-ol,
-ul {
+ol, ul {
   >li {
     &:before {
       position: absolute;
@@ -159,8 +145,7 @@ ol {
   }
 }
 
-ol,
-ul {
+ol, ul {
   >li {
     margin: 0 auto $li-bottom-space $li-bullets-width;
     line-height: $li-line-height;
@@ -173,9 +158,7 @@ ul {
 }
 
 li {
-
-  >ol,
-  >ul {
+  >ol, >ul {
     >li {
       font-size: ($li-child-size-ratio * 1em);
       margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
@@ -215,14 +198,12 @@ table {
   border-collapse: collapse;
 }
 
-td,
-th {
+td, th {
   padding: .25rem .5rem;
   border: 1px solid $table-border-color;
 }
 
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th {
+tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
   background-color: $table-background-color;
 }
 
@@ -243,10 +224,7 @@ blockquote {
 
 a.footnote {
 
-  &,
-  .post p &,
-  .post ol &,
-  .post ul & {
+  &, .post p &, .post ol &, .post ul & {
     margin: 0 3px;
     padding: 0 2px;
     font-size: $small-font-size;
@@ -293,8 +271,7 @@ img {
 
 // Nicolas Gallagher's micro clearfix hack
 // http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
   content: " ";
   display: table;
 }
@@ -320,6 +297,14 @@ img {
 /**
  * Layout & Section
  */
+
+ .page {
+  h1{
+    i.fas, i.far, i.fal, i.fad {
+      padding: 0 20px 0 0;
+    }
+  }
+ }
 
 // Sidebar
 .wrapper-sidebar {
@@ -400,13 +385,11 @@ img {
   }
 }
 
-.navlist {
-  text-align: center;
-}
 
 nav {
   display: block;
   margin-top: 23px; // @TODO: Vertically middle align
+  text-align: center;
   font-family: $base-font;
   font-weight: 500;
   font-size: 18px;
@@ -615,68 +598,88 @@ nav {
 
 // Archive
 .archive {
-  a {
-    color: $base-color;
-  }
-
   time {
     color: $base-lighten-color;
     font-size: $small-font-size;
     font-weight: 300;
     margin-left: 3px;
+  }
+
+  h2 {
+    text-decoration: underline;
+    
+    i.fas, i.far, i.fal, i.fad {
+      padding: 0 10px 0 5px;
+    }
+  }
+
+  h3 {
+    line-height: 1.5rem;
+    padding: 0 20px;
+
+    i.fas, i.far, i.fal, i.fad {
+      padding: 0 10px 0 5px;
+    }
+  }
+
+  li {
+    padding: 5px 20px;
   }
 }
 
 // Tags
-.tags>.label {
-  >li:before {
-    content: "";
+.tags{
+  h2 {
+    i.fas, i.far, i.fal, i.fad {
+      padding: 0 10px 0 5px;
+    }
   }
 
-  >li {
-    margin: 0;
-    font-size: $small-font-size;
-    font-weight: 300;
-    display: inline;
-
-    >a {
-      display: inline-block;
-      margin: 1px;
-      color: $base-color;
-      background-color: $tag-index-label-background-color;
-      border-radius: 3px;
-
-      &:hover {
-        background-color: $link-bghv-color;
-      }
-
-      span {
-        float: left;
-        padding: .5px 5px;
-
-        &.count {
-          background-color: $tag-index-count-background-color;
-          border-radius: 0 3px 3px 0;
-
+  .label {
+    >li:before {
+      content: "";
+    }
+  
+    >li {
+      margin: 0;
+      font-size: $small-font-size;
+      font-weight: 300;
+      display: inline;
+  
+      >a {
+        display: inline-block;
+        margin: 1px;
+        color: $base-color;
+        background-color: $tag-index-label-background-color;
+        border-radius: 3px;
+  
+        &:hover {
+          background-color: $link-bghv-color;
+        }
+  
+        span {
+          float: left;
+          padding: .5px 5px;
+  
+          &.count {
+            background-color: $tag-index-count-background-color;
+            border-radius: 0 3px 3px 0;
+  
+          }
         }
       }
     }
   }
-}
 
-.tags>.tag {
-  a {
-    color: $base-color;
-  }
-
-  time {
-    color: $base-lighten-color;
-    font-size: $small-font-size;
-    font-weight: 300;
-    margin-left: 3px;
+  .tag {
+    time {
+      color: $base-lighten-color;
+      font-size: $small-font-size;
+      font-weight: 300;
+      margin-left: 3px;
+    }
   }
 }
-
 
 // Footer
 .wrapper-footer-desktop {
@@ -753,6 +756,10 @@ footer {
 
 .footer-blank-block {
   padding-top: 45px;
+}
+
+.footer-blank-block-high {
+  padding-top: 50px;
 }
 
 /**

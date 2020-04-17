@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About - 关于
+title: <i class="fas fa-info"></i>About - 关于
 permalink: /about/
 ---
 
