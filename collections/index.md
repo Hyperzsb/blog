@@ -1,6 +1,6 @@
 ---
-layout: collections_page
-title: Collections - 收藏
+layout: page
+title: <i class="fas fa-star"></i>Collections - 收藏
 comments: false
 toc: true
 ---

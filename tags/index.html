@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tags - 标签
+title: <i class="fas fa-tags"></i>Tags - 标签
 permalink: /tags/
 ---
 
@@ -23,7 +23,7 @@ permalink: /tags/
 
   {% for tag in site.tags %}
     <h2 id="{{ tag[0] }}">
-      {{ tag[0] }}
+      <i class="fas fa-tag"></i>{{ tag[0] }}
     </h2>
     <ul class="tag">
       {% for post in tag[1] %}
@@ -44,5 +44,3 @@ permalink: /tags/
   {% endfor %}
 
 </div>
-
-<div class="footer-blank-block"></div>
