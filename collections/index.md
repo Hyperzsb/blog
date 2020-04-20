@@ -1,6 +1,7 @@
 ---
 layout: page
 title: <i class="fas fa-star"></i>Collections - 收藏
+permalink: /collections/
 comments: false
 toc: true
 ---

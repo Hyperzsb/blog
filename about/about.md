@@ -2,6 +2,8 @@
 layout: page
 title: <i class="fas fa-info"></i>About - 关于
 permalink: /about/
+comments: false
+toc: true
 ---
 
 **这是一篇个人简历**。
