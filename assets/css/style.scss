@@ -494,6 +494,13 @@ nav {
     margin-bottom: .1em;
   }
 
+  a {
+    color: $base-color;
+  }
+
+  a:hover {
+    color: $link-color;
+  }
 
   .comments {
     margin-top: 10px;
