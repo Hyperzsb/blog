@@ -492,14 +492,14 @@ nav {
 
   h1 {
     margin-bottom: .1em;
-  }
 
-  a {
-    color: $base-color;
-  }
-
-  a:hover {
-    color: $link-color;
+    a {
+      color: $base-color;
+    }
+  
+    a:hover {
+      color: $link-color;
+    }
   }
 
   .comments {
