@@ -1,6 +1,7 @@
 ---
 layout: page
-title: <i class="fas fa-calendar-alt"></i>Archive - 归档
+title: Archive - 归档
+type: archive
 permalink: /archive/
 ---
 
@@ -12,18 +13,33 @@ permalink: /archive/
   {% for post in site.posts %}
 
   {% unless post.next %}
-    <h2><i class="fas fa-angle-double-right"></i>{{ post.date | date: '%Y' | append: '年' }}</h2>
-    <h3><i class="fas fa-angle-right"></i>{{ post.date | date: '%m' | append: '月' }}</h3>
+    <h2>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg>
+      {{ post.date | date: '%Y' | append: '年' }}
+    </h2>
+    <h3>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
+      {{ post.date | date: '%m' | append: '月' }}
+    </h3>
   {% else %}
     {%- capture year -%}{{- post.date | date: '%Y' -}}{%- endcapture -%}
     {%- capture next_year -%}{{- post.next.date | date: '%Y' -}}{%- endcapture -%}
     {%- capture month -%}{{- post.date | date: '%m' -}}{%- endcapture -%}
     {%- capture next_month -%}{{- post.next.date | date: '%m' -}}{%- endcapture -%}
     {%- if year != next_year -%}
-      <h2><i class="fas fa-angle-double-right"></i>{{- post.date | date: '%Y' | append: '年' -}}</h2>
-      <h3><i class="fas fa-angle-right"></i>{{- post.date | date: '%m' | append: '月' -}}</h3>
+    <h2>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg>
+      {{ post.date | date: '%Y' | append: '年' }}
+    </h2>
+    <h3>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
+      {{ post.date | date: '%m' | append: '月' }}
+    </h3>
     {%- elsif  month != next_month -%}
-      <h3><i class="fas fa-angle-right"></i>{{- post.date | date: '%m' | append: '月' -}}</h3>
+    <h3>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
+      {{ post.date | date: '%m' | append: '月' }}
+    </h3>
     {%- endif -%}
   {% endunless %}
 
