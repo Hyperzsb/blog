@@ -1,7 +1,7 @@
 ---
 layout: page
-title: <i class="fas fa-star"></i>Collections - 收藏
-permalink: /collections/
+title: Collections - 收藏
+type: collections
 comments: false
 toc: true
 ---

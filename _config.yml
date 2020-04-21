@@ -45,11 +45,13 @@ excerpt_separator: <!-- more -->
 
 # 你的社交网络链接，它们会作为图标出现在你的网站页脚中，可选填写
 footer-links:
+  qq: 1948765057
   email: hyperzsb@outlook.com
   facebook: # https://www.facebook.com/<>
   github: Hyperzsb # https://github.com/<>
   stackoverflow: # http://stackoverflow.com/<>
   twitter: # https://www.twitter.com/<your_twitter_username>
+  rss: feed
 
 # 站点页脚的文字
 footer-text: Copyright (c) 2020 Hyperzsb

@@ -1,6 +1,7 @@
 ---
 layout: page
-title: <i class="fas fa-info"></i>About - 关于
+title: About - 关于
+type: about
 permalink: /about/
 comments: false
 toc: true

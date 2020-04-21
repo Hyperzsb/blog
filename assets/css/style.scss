@@ -300,8 +300,11 @@ img {
 
  .page {
   h1{
-    i.fas, i.far, i.fal, i.fad {
-      padding: 0 20px 0 0;
+    svg {
+      display: inline-block;
+      margin-bottom: -3px;
+      padding-right: 15px;
+      height: 30px;
     }
   }
  }
@@ -615,8 +618,11 @@ nav {
   h2 {
     text-decoration: underline;
     
-    i.fas, i.far, i.fal, i.fad {
-      padding: 0 10px 0 5px;
+    svg {
+      display: inline-block;
+      margin-bottom: -3px;
+      padding-right: 10px;
+      height: 24px;
     }
   }
 
@@ -624,8 +630,11 @@ nav {
     line-height: 1.5rem;
     padding: 0 20px;
 
-    i.fas, i.far, i.fal, i.fad {
-      padding: 0 10px 0 5px;
+    svg {
+      display: inline-block;
+      margin-bottom: -3px;
+      padding-right: 10px;
+      height: 20px;
     }
   }
 
@@ -637,8 +646,11 @@ nav {
 // Tags
 .tags{
   h2 {
-    i.fas, i.far, i.fal, i.fad {
-      padding: 0 10px 0 5px;
+    svg {
+      display: inline-block;
+      margin-bottom: -4px;
+      padding-right: 10px;
+      height: 24px;
     }
   }
 
