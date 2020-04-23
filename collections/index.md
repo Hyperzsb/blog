@@ -161,7 +161,21 @@ toc: true
 
   > 给原始代码添加Word可以使用的高亮样式，支持C/C++/C#、Java、JavaScript、Python、SQL、HTML等多种语言。
 
----
+- **[Font Awesome](https://fontawesome.com/)**
+
+  > 知名的Web矢量图标库，使用范围极广。
+  >
+  > 支持CSS、JavaScript、CDN、SVG等引用方式，十分灵活。
+
+- **[How popular is Donald Trump?](https://projects.fivethirtyeight.com/trump-approval-ratings/)**
+
+  > 来看看特朗普的支持率？还有历届美国总统的支持率信息与对比。
+
+- **[COVID-19 Map](https://coronavirus.jhu.edu/map.html)**
+
+  > 约翰斯·霍普金斯大学的实时疫情数据地图。
+
+
 
 ## 实用高质的博文
 
