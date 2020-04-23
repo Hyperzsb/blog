@@ -48,6 +48,10 @@
             {% continue %}
         {% endif %}
 
+        {% if headerLevel == 1 %}
+            {% continue %}
+        {% endif %}
+
         {% if firstHeader %}
             {% assign firstHeader = false %}
             {% assign minHeader = headerLevel %}
