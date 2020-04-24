@@ -333,12 +333,6 @@ header {
   text-align: center;
   margin: 40% auto 0;
 
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
   @include low-1 {
     margin: 30% auto 0;
   }
@@ -353,6 +347,12 @@ header {
 
   @include low-4 {
     margin: 0 auto 0;
+  }
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
   }
 
   .site-avatar {
