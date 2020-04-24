@@ -2,9 +2,9 @@
 layout: page
 title: About - 关于
 type: about
-permalink: /about/
 comments: false
 toc: true
+permalink: /about
 ---
 
 **这是一篇个人简历**。

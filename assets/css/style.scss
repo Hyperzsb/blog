@@ -269,36 +269,25 @@ img {
   background: $selection-background-color;
 }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table;
+::-webkit-scrollbar {
+  width: 5px;     
+  height: 1px;
 }
-
-.clearfix:after {
-  clear: both;
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: $base-lightener-color;
 }
-
-// Alignment
-.center {
-  text-align: center;
-
-  &-image {
-    margin: 0 auto;
-    display: block;
-  }
-}
-
-.right {
-  text-align: right
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: $background-color;
 }
 
 /**
  * Layout & Section
  */
+.page {
+  padding-bottom: 45px;
 
- .page {
   h1{
     svg {
       display: inline-block;
@@ -333,9 +322,10 @@ img {
 }
 
 .sidebar {
-  padding: 20px 0;
+  padding: 45px 0;
 
   @include mobile {
+    padding: 20px 0;
     text-align: center;
   }
 }
@@ -398,7 +388,8 @@ nav {
   font-size: 18px;
 
   @include mobile {
-    margin-top: 9px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 16px;
   }
 
@@ -418,7 +409,7 @@ nav {
 // Content
 .wrapper-content {
   float: right;
-  width: 76.5%;
+  width: 75%;
 
   @include mobile {
     float: none;
@@ -428,7 +419,6 @@ nav {
 
 // Posts
 .posts {
-
   .tag {
     display: inline;
     font-weight: 300;
@@ -521,7 +511,7 @@ nav {
   left: 25%;
   position: fixed;
   z-index: 4;
-  padding: 60px 20px 0 20px;
+  padding: 50px 15px 50px 10px;
   overflow-y: auto;
 
   &:before {
@@ -536,6 +526,7 @@ nav {
 
   li {
     font-size: 0.87rem;
+    padding: 0 0 0 15px;
   }
 
   li:before {
@@ -771,14 +762,6 @@ footer {
       left: 0;
     }
   }
-}
-
-.footer-blank-block {
-  padding-top: 45px;
-}
-
-.footer-blank-block-high {
-  padding-top: 50px;
 }
 
 /**

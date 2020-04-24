@@ -13,7 +13,7 @@ layout: default
       <article class="post pinned">
 
         <h1>
-            <span title="pinned"><i data-feather="anchor"></i></span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </h1>
 
         <div clsss="meta">
@@ -51,9 +51,10 @@ layout: default
     {% endif %}
   {% endfor %}
   
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}
     {% unless post.pinned %}
     <article class="post">
+
       <h1>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       </h1>
@@ -77,6 +78,7 @@ layout: default
           </li>
           {% endfor %}
         </ul>
+
       </div>
 
       <div class="entry">
@@ -84,6 +86,7 @@ layout: default
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+
     </article>
     {% endunless %}
   {% endfor %}
@@ -107,5 +110,5 @@ layout: default
   {%- endif -%}
 </div>
 {%- else -%}
-<div class="footer-blank-block"></div>
+<div style="padding-top: 40px;"></div>
 {%- endif -%}
