@@ -111,3 +111,27 @@ $dd-position: $dt-width+$dt-dd-space;
     @content;
   }
 }
+
+@mixin low-1 {
+  @media screen and (max-height: 700px) {
+    @content;
+  }
+}
+
+@mixin low-2 {
+  @media screen and (max-height: 670px) {
+    @content;
+  }
+}
+
+@mixin low-3 {
+  @media screen and (max-height: 640px) {
+    @content;
+  }
+}
+
+@mixin low-4 {
+  @media screen and (max-height: 610px) {
+    @content;
+  }
+}
