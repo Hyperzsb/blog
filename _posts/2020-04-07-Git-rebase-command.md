@@ -6,7 +6,6 @@ Author: Hyperzsb
 tags: [git]
 comments: true
 toc: true
-pinned: true
 ---
 
 **git rebase (变基) 命令是用来改变一串提交是以什么为基础的**
