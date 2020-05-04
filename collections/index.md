@@ -141,6 +141,20 @@ toc: true
   - **[Docker官方文档](https://docs.docker.com/)**
   - **[Docker - 从入门到实践](https://yeasy.gitbooks.io/docker_practice/content/)**
 
+- **Dataset**
+
+  - **[MAWI Working Group Traffic Archive](http://mawi.wide.ad.jp/mawi/)**
+
+    > 一个pcap包数据集
+
+  - **[CIC Datasets](https://www.unb.ca/cic/datasets/)**
+
+    > 一个网络流数据集，包括很多种类，部分已经进行了分类
+
+  - **[Moore](https://www.cl.cam.ac.uk/research/srg/netos/projects/archive/nprobe/data/index.html)**
+
+    > 传说中的Moore数据集，但是我总感觉这个不是，有待考证
+
 - **[Ubuntu - Release](http://releases.ubuntu.com/)**
 
   > Ubuntu官方镜像下载。
@@ -161,6 +175,10 @@ toc: true
 
   > 给原始代码添加Word可以使用的高亮样式，支持C/C++/C#、Java、JavaScript、Python、SQL、HTML等多种语言。
 
+- **[YouTube视频字幕下载](https://zhuwei.me/y2b/)**
+
+  > 可以将对应视频的字幕以各种格式下载下来，甚至有机翻生成的中英双字字幕，很是实用。
+  
 - **[Font Awesome](https://fontawesome.com/)**
 
   > 知名的Web矢量图标库，使用范围极广。
