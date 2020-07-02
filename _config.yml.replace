@@ -7,12 +7,12 @@ name: Hyperzsb's Ideas
 description: 抓住思考的瞬间
 
 # 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）
-url: http://blog.ruixincommunity.cn/
+url: http://blog.ruixincommunity.cn
 
 # 添加你的博客的二级域名，一般来说是你的repository名
 # 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
 # 那么就写成 "/repository-name"
-baseurl: http://blog.ruixincommunity.cn/
+baseurl: /
 
 #
 # 下面的设定都是可选的
@@ -55,7 +55,6 @@ footer-links:
 
 # 站点页脚的文字
 footer-text: Copyright (c) 2020 Hyperzsb
-
 # 站点备案信息
 record-text: 
 
