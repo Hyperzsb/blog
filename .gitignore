@@ -4,5 +4,4 @@
 _site/
 .jekyll-cache/
 _site/
-*.reload
 *~
