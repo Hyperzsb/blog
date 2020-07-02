@@ -1,13 +1,8 @@
-.idea/*
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-.vscode/*
-.github/*
-=======
-=======
->>>>>>> Stashed changes
-_site/*
->>>>>>> Stashed changes
-.jekyll-cache/*
-_site/*
+.idea/
+.vscode/
+.github/
+_site/
+.jekyll-cache/
+_site/
+*.reload
 *~
