@@ -4,7 +4,6 @@ title: About - 关于
 type: about
 comments: false
 toc: true
-permalink: /about
 ---
 
 **Hyperzsb的临时博客**

@@ -2,7 +2,6 @@
 layout: page
 title: Tags - 标签
 type: tags
-permalink: /tags
 ---
 
 {% if site.posts.size == 0 %}
@@ -34,7 +33,7 @@ permalink: /tags
             {% if post.link %}
               <a href="{{ post.link }}">
             {% else %}
-              <a href="{{ site.baseurl }}{{ post.url }}">
+              <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
             {% endif %}
                 {{ post.title }}
               </a>
