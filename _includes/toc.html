@@ -1,4 +1,5 @@
 {% capture tocWorkspace %}
+
     {% comment %}
         Version 1.0.8
           https://github.com/allejo/jekyll-toc
@@ -32,12 +33,18 @@
     {% assign minHeader = include.h_min | default: 1 %}
     {% assign maxHeader = include.h_max | default: 6 %}
     {% assign nodes = include.html | split: '<h' %}
+    {% assign item_class = include.item_class | default: '' %}
     {% assign firstHeader = true %}
 
-    {% capture listModifier %}{% if orderedList %}1.{% else %}-{% endif %}{% endcapture %}
+    {% capture listModifier %}{% if orderedList %}1. {% else %}- {% endif %}{% endcapture %}
 
     {% for node in nodes %}
+
         {% if node == "" %}
+            {% continue %}
+        {% endif %}
+
+        {% if html_class contains "no_toc" %}
             {% continue %}
         {% endif %}
 
@@ -48,10 +55,6 @@
             {% continue %}
         {% endif %}
 
-        {% if headerLevel == 1 %}
-            {% continue %}
-        {% endif %}
-
         {% if firstHeader %}
             {% assign firstHeader = false %}
             {% assign minHeader = headerLevel %}
@@ -59,11 +62,18 @@
 
         {% assign lastIndent = indentAmount %}
         {% assign indentAmount = headerLevel | minus: minHeader | add: 1 %}
+        {% comment %}
         {% if lastHeaderLevel and lastHeaderLevel == headerLevel %}
             {% assign indentAmount = lastIndent %}
         {% elsif lastIndent and lastIndent < indentAmount %}
             {% assign indentAmount = lastIndent | plus: 1 %}
         {% endif %}
+        {% endcomment %}
+
+        {% assign space = '' %}
+        {% for i in (1..indentAmount) %}
+            {%- assign space = space | prepend: '&nbsp;&nbsp;&nbsp;' -%}
+        {% endfor %}
 
         {% assign _workspace = node | split: '</h' %}
 
@@ -75,28 +85,18 @@
         {% assign _classWorkspace = _classWorkspace[1] | split: '"' %}
         {% assign html_class = _classWorkspace[0] %}
 
-        {% if html_class contains "no_toc" %}
-            {% continue %}
-        {% endif %}
-
         {% capture _hAttrToStrip %}{{ _workspace[0] | split: '>' | first }}>{% endcapture %}
         {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
 
-        {% assign space = '' %}
-        {% for i in (1..indentAmount) %}
-            {% assign space = space | prepend: '    ' %}
-        {% endfor %}
-
-        {% unless include.item_class == blank %}
-            {% capture listItemClass %}{:.{{ include.item_class | replace: '%level%', headerLevel }}}{% endcapture %}
-        {% endunless %}
+        {% if item_class != '' %}
+            {% capture listItemClass %}{:.{{ item_class | replace: '%level%', headerLevel }}}{% endcapture %}
+        {% endif %}
 
         {% capture heading_body %}{% if include.sanitize %}{{ header | strip_html }}{% else %}{{ header }}{% endif %}{% endcapture %}
 
         {%- capture my_toc -%}
             {{ my_toc }}
-{{ space }}{{ listModifier }} {{ listItemClass }} 
-[{{- heading_body | replace: "|", "\|" | truncate: 20 -}}]({% if include.baseurl %}{{ include.baseurl }}{% endif %}#{{ html_id }} "{{heading_body}}"){% if include.anchor_class %}{:.{{ include.anchor_class }}}{% endif %}
+{{ listModifier }}{{ space }}{{ listItemClass }}[{{ heading_body | replace: "|", "\|" | truncate: 20 }}]({% if include.baseurl %}{{ include.baseurl }}{% endif %}#{{ html_id }} "{{heading_body}}"){% if include.anchor_class %}{:.{{ include.anchor_class }}}{% endif %}
         {%- endcapture -%}
 
     {% endfor %}
@@ -110,4 +110,5 @@
         {% capture my_toc %}{: #{{ include.id }}}
 {{ my_toc | lstrip }}{% endcapture %}
     {% endif %}
+
 {% endcapture %}{% assign tocWorkspace = '' %}{{ my_toc | markdownify | strip }}
