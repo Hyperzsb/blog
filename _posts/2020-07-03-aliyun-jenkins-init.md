@@ -117,7 +117,7 @@ Jenkins 支持多种安装方式，一下给出常用的两种安装方式流程
 
    - 方法一：
 
-     > 该方法来自于[ Jenkins 官方中文文档]([https://www.jenkins.io/zh/doc/book/installing/#%E5%9C%A8docker%E4%B8%AD%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8Cjenkins](https://www.jenkins.io/zh/doc/book/installing/#在docker中下载并运行jenkins))，也是目前各类博客常见的实践类型。**我采用了这种方法。**
+     > 该方法来自于[ Jenkins 官方中文文档](https://www.jenkins.io/zh/doc/book/installing/#在docker中下载并运行jenkins)，也是目前各类博客常见的实践类型。**我采用了这种方法。**
 
      ```shell
      $ docker run \
