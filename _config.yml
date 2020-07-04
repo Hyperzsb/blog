@@ -27,15 +27,15 @@ favicon: https://hyperzsb.tech/assets/images/favicon.png
 # 菜单中的按钮
 navigation:
   - name: 首页
-    url: /
+    url: 
   - name: 归档
-    url: /archive
+    url: archive
   - name: 标签
-    url: /tags
+    url: tags
   - name: 收藏
-    url: /collections
+    url: collections
   - name: 关于
-    url: /about
+    url: about
 
 # 每页的文章数
 paginate: 8
