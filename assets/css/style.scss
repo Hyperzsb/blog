@@ -301,20 +301,19 @@ img {
 // Sidebar
 .wrapper-sidebar {
   width: 25%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-color: $background-color;
   height: 100%;
+  background-color: $background-color;
   top: 0;
   left: 0;
   position: fixed;
   z-index: 4;
   border-right: 1px solid $divider-color;
+  text-align: center;
 
   @include mobile {
     width: 100%;
     height: auto;
-    padding-bottom: 24px;
+    padding: 15px 0;
     position: relative;
     border-bottom: 1px solid $divider-color;
     border-right: 0;
@@ -322,119 +321,86 @@ img {
 }
 
 header {
-  padding: 20px 0;
-
-  @include mobile {
-    text-align: center;
-  }
+  height: 80%;
 }
 
 .site-info {
-  text-align: center;
-  margin: 25% auto 0;
-
-  @include low-1 {
-    margin: 30% auto 0;
-  }
-
-  @include low-2 {
-    margin: 20% auto 0;
-  }
-
-  @include low-3 {
-    margin: 10% auto 0;
-  }
-
-  @include low-4 {
-    margin: 0 auto 0;
-  }
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
+  height: 85%;
+  margin: 0 auto;
 
   .site-avatar {
-    margin: 0 auto 15%;
-    display: block;
-    max-width: 200px;
-    max-height: 200px;
+    height: 80%;
+    margin: 0 auto;
 
-    @include low-1 {
-      margin: 0 auto 7%;
-    }
-  
-    @include low-2 {
-      margin: 0 auto 5%;
-    }
-  
-    @include low-3 {
-      margin: 0 auto 0;
-    }
-  
-    @include low-4 {
-      margin: 0 auto 0;
-    }
+    .avatar-padding {
+      height: 50%;
 
-    @include mobile {
-      margin: 0 auto;
-      max-width: 120px;
-      max-height: 120px;
+      @include mobile {
+        height: 0;
+      }
     }
 
     img {
-      display: inline-block;
-      border-radius: 2px;
+      height: 50%;
+      display: block;
+      max-width: 200px;
+      max-height: 200px;
+      margin: 0 auto;
+
+      @include mobile {
+        max-width: 120px;
+        max-height: 120px;
+      }
+    }
+
+  }
+
+  .site-name {
+    height: 10%;
+    margin: 0 auto;
+    color: $base-color;
+    cursor: pointer;
+    font-family: $base-font;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .site-description {
+    height: 10%;
+    margin: 0 auto;
+    padding: 10px;
+    color: $base-lighten-color;
+    font-size: 16px;
+
+    @include mobile {
+      margin: 10px auto;
     }
   }
+  
 }
-
-.site-name {
-  margin: 0 auto;
-  color: $base-color;
-  cursor: pointer;
-  font-family: $base-font;
-  font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 1px;
-}
-
-.site-description {
-  margin: 15px auto;
-  color: $base-lighten-color;
-  font-size: 16px;
-
-  @include mobile {
-    margin: 10px auto;
-  }
-}
-
 
 nav {
-  display: block;
-  margin-top: 23px; // @TODO: Vertically middle align
-  text-align: center;
+  height: 15%;
   font-family: $base-font;
   font-weight: 500;
-  font-size: 18px;
-
-  @include mobile {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 16px;
-  }
 
   a {
     margin: 0 10px;
-    text-align: right;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 1px;
 
     @include mobile {
-      margin: 0 10px;
-      color: $link-color;
+      top: 0;
+      transform: translateY(0);
+      font-size: 16px;
     }
+
   }
 }
 
@@ -730,6 +696,7 @@ nav {
 
 // Footer
 .wrapper-footer-desktop {
+  height: 20%;
   margin-top: 50px;
   border-top: 1px solid $footer-border-color;
   background-color: $footer-background-color;
