@@ -1,7 +1,11 @@
+# Directories
 .idea/
 .vscode/
 .github/
 _site/
 .jekyll-cache/
 _site/
+# Files
 *~
+Gemfile
+Gemfile.lock
