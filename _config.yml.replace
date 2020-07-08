@@ -7,7 +7,7 @@ name: Hyperzsb's Ideas
 description: 抓住思考的瞬间
 
 # 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）
-url: http://blog.ruixincommunity.cn
+url: https://blog.ruixincommunity.cn
 
 # 添加你的博客的二级域名，一般来说是你的repository名
 # 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
@@ -19,9 +19,9 @@ baseurl: /
 #
 
 # 你的博客logo图片URL，建议尺寸不超过300px × 300px
-avatar: http://blog.ruixincommunity.cn/assets/images/logo.png
+avatar: https://blog.ruixincommunity.cn/assets/images/logo.png
 # 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
-favicon: http://blog.ruixincommunity.cn/assets/images/favicon.png
+favicon: https://blog.ruixincommunity.cn/assets/images/favicon.png
 
 
 # 菜单中的按钮
