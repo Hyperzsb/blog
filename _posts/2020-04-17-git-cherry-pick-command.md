@@ -6,7 +6,6 @@ Author: Hyperzsb
 tags: [git]
 comments: true
 toc: true
-pinned: true
 ---
 
 cherry-pick同rebase相似，同是用现有提交对版本库进行更改。
