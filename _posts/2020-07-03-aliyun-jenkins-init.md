@@ -20,7 +20,7 @@ toc: true
 
 **系统版本：Ubuntu 18.04**
 
-**流程同[ Jenkins 官方文档](https://www.jenkins.io/zh/doc/book/installing/)中给出的有些许差异，对于一些安装细节采用了其它博客中的一些内容，同官网不一致的地方将会进行进一步的说明。**
+**流程同[ Jenkins 官方中文文档](https://www.jenkins.io/zh/doc/book/installing/)中给出的有些许差异，对于一些安装细节采用了其它博客中的一些内容，同官网不一致的地方将会进行进一步的说明。**
 
 Jenkins 支持多种安装方式，一下给出常用的两种安装方式流程：
 
@@ -286,3 +286,54 @@ Jenkins 支持多种安装方式，一下给出常用的两种安装方式流程
    >如果在流水线中需要连接远程主机（包括在 Jenkins 容器中访问宿主机），则需要安装 SSH 相关插件。
 
    - SSH plugin
+
+### SSH 配置
+
+1. 定位配置选项：
+
+   Jenkins 主页 -> 系统管理 -> 系统配置 -> SSH remote hosts
+
+2. 配置远程主机 IP ：
+
+   在`Hostname`一栏中输入远程主机的 IP 地址。
+
+3. 配置端口：
+
+   在`Port`一栏中输入远程主机 SSH 端口，一般为`22`。
+
+4. 配置凭据：
+
+   在`Credentials`一栏右侧有一`添加`按钮，点击，选择`Jenkins`添加凭据：
+
+   - `Domain` 一栏选择`全局凭据 (unrestricted)`；
+   - `类型`一栏选择 `Username with password` ;
+   - `范围`一栏选择`全局 (Jenkins, nodes, items, all child items, etc)`；
+   - `用户名`一栏输入 SSH 登录用户用户名；
+   - `密码`一栏输入 SSH 登录用户密码；
+   - `ID`一栏输入自定义内容，用于唯一标识该凭据；
+   - `描述`一栏输入自定义内容，用于描述该凭据。
+
+5. 保存：
+
+   点击`保存`按钮。
+
+### Jenkins 时间设置
+
+>  默认情况下 Jenkins 使用的是 UTC 时区，导致 Jenkins 时间显示同国内相差8小时，使用颇为不便。
+
+可以在 `$JENKINS_HOME` 目录下创建文件 `init.groovy` 文件；或者创建目录 `$JENKINS_HOME/init.groovy.d/` ，并在这个目录下面创建任何以 `.groovy` 结尾的文件。在任意一个上述文件内填入下面内容即可，这些内容会在 Jenkins 每次启动后加载：
+
+```java
+System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Shanghai')
+```
+
+
+
+---
+
+## 参考
+
+- [ Jenkins 官方中文文档](https://www.jenkins.io/zh/doc/book/)
+- [ Jenkins 官方英文文档](https://www.jenkins.io/doc/book/)
+- [jenkins如何配置ssh服务器](https://blog.csdn.net/liujingqiu/article/details/58584559)
+- [永久修改以容器化方式运行的Jenkins系统时间](https://www.jianshu.com/p/47d767cf893d)
