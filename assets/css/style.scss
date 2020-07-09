@@ -329,11 +329,11 @@ header {
   margin: 0 auto;
 
   .site-avatar {
-    height: 80%;
+    height: 75%;
     margin: 0 auto;
 
     .avatar-padding {
-      height: 50%;
+      height: 40%;
 
       @include mobile {
         height: 0;
@@ -341,13 +341,14 @@ header {
     }
 
     img {
-      height: 50%;
+      height: 60%;
       display: block;
       max-width: 200px;
       max-height: 200px;
       margin: 0 auto;
 
       @include mobile {
+        height: auto;
         max-width: 120px;
         max-height: 120px;
       }
@@ -356,7 +357,7 @@ header {
   }
 
   .site-name {
-    height: 10%;
+    height: 15%;
     margin: 0 auto;
     color: $base-color;
     cursor: pointer;
@@ -372,10 +373,6 @@ header {
     padding: 10px;
     color: $base-lighten-color;
     font-size: 16px;
-
-    @include mobile {
-      margin: 10px auto;
-    }
   }
   
 }
