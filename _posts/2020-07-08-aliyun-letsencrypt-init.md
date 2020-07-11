@@ -145,11 +145,11 @@ $ chmod 0777 au.sh
    	# 采用 DNS 认证方式
    	--preferred-challenges dns \
    	# 测试运行，并不真的运行
-       --dry-run \
-       # 认证钩子，使用下载的脚本进行认证和清理
-       --manual-auth-hook "/脚本目录/au.sh python aly add" --manual-cleanup-hook "/脚本目录/au.sh python aly clean"
-       # 证书申请的前置钩子和后置钩子，用于停止和启动 Nginx 服务器
-       --pre-hook "sudo systemctl stop nginx.service" --post-hook "sudo systemctl start nginx.service"
+      --dry-run \
+      # 认证钩子，使用下载的脚本进行认证和清理
+      --manual-auth-hook "/脚本目录/au.sh python aly add" --manual-cleanup-hook "/脚本目录/au.sh python aly clean" \
+      # 证书申请的前置钩子和后置钩子，用于停止和启动 Nginx 服务器
+      --pre-hook "sudo systemctl stop nginx.service" --post-hook "sudo systemctl start nginx.service" 
    ```
 
    > 在运行中可能需要你输入一个邮箱进行消息提醒，输入你的邮箱即可
