@@ -12,16 +12,16 @@ url: https://github.hyperzsb.tech/
 # 添加你的博客的二级域名，一般来说是你的repository名
 # 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
 # 那么就写成 "/repository-name"
-baseurl: /
+baseurl: /blog
 
 #
 # 下面的设定都是可选的
 #
 
 # 你的博客logo图片URL，建议尺寸不超过300px × 300px
-avatar: https://github.hyperzsb.tech/assets/images/logo.png
+avatar: https://github.hyperzsb.tech/blog/assets/images/logo.png
 # 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
-favicon: https://github.hyperzsb.tech/assets/images/favicon.png
+favicon: https://github.hyperzsb.tech/blog/assets/images/favicon.png
 
 
 # 菜单中的按钮
