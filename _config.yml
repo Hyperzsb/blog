@@ -78,7 +78,7 @@ google_analytics:
 # 显示未来时间的文章
 future: false
 # 时区配置
-timezone: Asia/Shanghai
+# timezone: Asia/Shanghai
 
 #
 # !! 以下所有设置都不需要更改 !!
