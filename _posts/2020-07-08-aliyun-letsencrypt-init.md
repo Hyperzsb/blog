@@ -164,3 +164,24 @@ $ chmod 0777 au.sh
 
    > 根据各类文档，Certbot 已经设置了自动更新任务，应当不需要手动进行设置。如果后期出现默认配置不能进行自动更新的情况，再对本教程进行更新。
 
+
+
+---
+
+## 遇到的问题
+
+### [X509] no certificate or crl found
+
+如果在证书申请阶段程序报出该错误，可以使用如下方式尝试解决：
+
+```shell
+# 重装 CA 证书
+$ sudo apt remove ca-certificates
+$ sudo apt install ca-certificates
+$ curl -I https://www.gnu.org/
+# 重装 Cartbot
+$ sudo apt install certbot
+# 重新执行出错的相应 Certobt 命令，例如：
+$ certbot certonly -d subdomain.example.com
+```
+
