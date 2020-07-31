@@ -21,6 +21,12 @@
 
     {% include analytics.html %}
 
+    <div class="wrapper-footer-mobile">
+      <footer class="footer">
+        {% include footer.html %}
+      </footer>
+    </div>
+    
   </body>
 
   {% if page.toc==true %}
@@ -28,11 +34,5 @@
     document.getElementById("main").classList.add("withtoc");
   </script>
   {% endif %}
-  
-  <div class="wrapper-footer-mobile">
-    <footer class="footer">
-      {% include footer.html %}
-    </footer>
-  </div>
 
 </html>
