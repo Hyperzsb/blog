@@ -69,7 +69,7 @@ disqus: #shortname
 gitalk:
   clientID: 468ab2c347d8544a4cd9
   clientSecret: 7b82ff8ccc241d11915ecd70c8124cfad238bf96
-  repo: Hyperzsb.github.io
+  repo: blog
   owner: Hyperzsb
 
 # 输入Google Analytics web tracking code
