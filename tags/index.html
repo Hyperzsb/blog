@@ -11,35 +11,48 @@ type: tags
 <div class="tags">
 
   <ul class="label">
-    {% for tag in site.tags %}
-    <li>
-      <a href="#{{ tag[0] }}">
-        <span>{{ tag[0] }}</span>
-        <span class="count">{{ tag[1] | size }}</span>
-      </a>
-    </li>
+    {% assign index = 0 %}
+    {%- for tag in site.tags -%}
+      {% assign size = tag[1].size %}
+      {% if index == 0 %}
+        {%- assign tags = tags | append: tag[0] | append: "##" | append: size -%}
+      {% else %}
+        {%- assign tags = tags | append: "," | append: tag[0] | append: "##" | append: size -%}
+      {% endif %}
+      {%- for post in tag[1] -%}
+        {%- assign tags = tags | append: "##" | append: post.title | append: "|" | append: post.date | append: "|" | append: post.url -%}
+      {%- endfor -%}
+      {% assign index = index | plus: 1 %}
+    {%- endfor -%}
+    {%- assign tags = tags | split: "," | sort_natural -%}
+
+    {% for tag in tags %}
+      {% assign tag_details = tag | split: "##" %}
+      <li>
+        <a href="#{{ tag_details[0] }}">
+          <span>{{ tag_details[0] }}</span>
+          <span class="count">{{ tag_details[1] }}</span>
+        </a>
+      </li>
     {% endfor %}
   </ul>
 
-  {% for tag in site.tags %}
-    <h2 id="{{ tag[0] }}">
+  {% for tag in tags %}
+    {% assign tag_details = tag | split: "##" %}
+    <h2 id="{{ tag_details[0] }}">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg>
-      {{ tag[0] }}
+      {{ tag_details[0] }}
     </h2>
     <ul class="tag">
-      {% for post in tag[1] %}
-        {% if post.title != null %}
-          <li>
-            {% if post.link %}
-              <a href="{{ post.link }}">
-            {% else %}
-              <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
-            {% endif %}
-                {{ post.title }}
-              </a>
-              <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-          </li>
-        {% endif %}
+      {% assign post_num = tag_details[1] | plus: 1 %}
+      {% for i in (2..post_num) %}
+        {% assign post_details = tag_details[i] | split: "|" %}
+        <li>
+            <a href="{{ site.url }}{{ site.baseurl }}{{ post_details[2] }}">
+              {{ post_details[0] }}
+            </a>
+            <time>{{ post_details[1] | date: "%Y-%m-%d" }}</time>
+        </li>
       {% endfor %}
     </ul>
   {% endfor %}

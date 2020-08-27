@@ -7,21 +7,21 @@ name: Hyperzsb's Ideas
 description: 抓住思考的瞬间
 
 # 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）
-url: https://github.hyperzsb.tech
+url: http://127.0.0.1/
 
 # 添加你的博客的二级域名，一般来说是你的repository名
 # 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
 # 那么就写成 "/repository-name"
-baseurl: /blog
+baseurl: /
 
 #
 # 下面的设定都是可选的
 #
 
 # 你的博客logo图片URL，建议尺寸不超过300px × 300px
-avatar: https://github.hyperzsb.tech/blog/assets/images/logo.png
+avatar: http://127.0.0.1/assets/images/logo.png
 # 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
-favicon: https://github.hyperzsb.tech/blog/assets/images/favicon.png
+favicon: http://127.0.0.1/assets/images/favicon.png
 
 
 # 菜单中的按钮
@@ -67,10 +67,10 @@ disqus: #shortname
 
 # 输入Gitalk相关设定，即可添加评论区，具体请看教程
 gitalk:
-  clientID: 468ab2c347d8544a4cd9
-  clientSecret: 7b82ff8ccc241d11915ecd70c8124cfad238bf96
-  repo: blog
-  owner: Hyperzsb
+  clientID: 
+  clientSecret: 
+  repo: 
+  owner: 
 
 # 输入Google Analytics web tracking code
 google_analytics:
@@ -78,7 +78,7 @@ google_analytics:
 # 显示未来时间的文章
 future: false
 # 时区配置
-timezone: Asia/Shanghai
+# timezone: Asia/Shanghai
 
 #
 # !! 以下所有设置都不需要更改 !!
@@ -118,4 +118,3 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-  - .gitignore
