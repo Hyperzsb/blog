@@ -48,7 +48,7 @@ type: tags
       {% for i in (2..post_num) %}
         {% assign post_details = tag_details[i] | split: "|" %}
         <li>
-            <a href="{{ site.url }}{{ site.baseurl }}{{ post_details[2] }}">
+            <a href="{{ site.url }}{{ site.baseurl }}{{ post_details[2] | remove_first: "/" }}">
               {{ post_details[0] }}
             </a>
             <time>{{ post_details[1] | date: "%Y-%m-%d" }}</time>

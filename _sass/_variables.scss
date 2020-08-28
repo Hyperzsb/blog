@@ -1,13 +1,3 @@
-/**
- * Variables
- */
-
-/**
- * 颜色使用opencolor https://yeun.github.io/open-color/
- * 主题色可选 red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow
- * 默认为teal，如果需要更换，可以直接将teal并替换成你想要的颜色
- */
-
 $blue: $oc-teal-8;
 $black: #000;
 $darkerGray: #222;
@@ -16,34 +6,9 @@ $gray: #666;
 $lightGray: #eee;
 $white: #fff;
 
-// Font stacks
-$helvetica: Helvetica,
-Arial,
-sans-serif;
-$helveticaNeue: "Helvetica Neue",
-Helvetica,
-Arial,
-sans-serif;
-$georgia: Georgia,
-serif;
-
 // Fonts
-$base-font: "Noto Serif",
-"PT Serif",
-source-han-serif-sc,
-"Source Han Serif SC",
-"Source Han Serif CN",
-"Source Han Serif TC",
-"Source Han Serif TW",
-"Source Han Serif",
-"Songti SC",
-SimSon,
-serif;
-$code-font: 'Menlo',
-'Courier New',
-'Monaco',
-'Spoqa Han Sans',
-monospace;
+$base-font: source-han-serif-sc, serif;
+$code-font: courier-std, monospace;
 
 // Font sizes
 $base-font-size: 16px;
