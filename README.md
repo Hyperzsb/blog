@@ -1,18 +1,23 @@
-# Hyperzsb's Personal Blog Website
+# Hyperzsb's Personal Blog
 
 A blog and introduction website for Hyperzsb.
 
-**Please view at [Hyperzsb's Ideas](https://hyperzsb.tech/).**
+**Please view at [Hyperzsb's Ideas](https://blog.hyperzsb.tech/).**
 
-**Generated with [LOFFER](https://fromendworld.github.io/LOFFER/document/).**
+**Generated based on [LOFFER](https://fromendworld.github.io/LOFFER/document/), but abundance of changes have been made.**
+
+
 
 ## What's new
 
-Some changes are made based on [LOFFER](https://fromendworld.github.io/LOFFER/document/).
-
 ### Refactor
 
-Refactored the original codes making them easier to read and organize.
+Refactored the original codes making them easier to read and organize: 
+
+- Code indentation.
+- Code structure.
+- Code style.
+- ......
 
 **To see details, please diff them by yourself.**
 
@@ -39,16 +44,40 @@ Refactored the original codes making them easier to read and organize.
 - **Archive Detail**
 
   > Show archived information in more details, accurate to the month.
+  
+
+- **Sorted Tags**
+
+  >Make Tags page's tags sorted by dictionary.
 
 ### Style
 
-A lot of changes are made, including:
-
-- Header width and responsive height on different devices.
-- Links color.
+- Dynamic Adobe typekit web font.
+- Responsive header and footer on different devices.
+- Colors.
 - Components paddings and margins making them more beautiful.
 - ......
 
 ### Assets
 
 Use fewer / smaller assets or change CDN make pages easy to load.
+
+***Continually updating...***
+
+### Fix bugs
+
+Fix lots of old or new bugs.
+
+**To see details, please view Git log.**
+
+
+
+## Use Guide
+
+***Coming soon...***
+
+
+
+## License
+
+This project is licensed under the **[MIT License](https://github.com/Hyperzsb/blog/blob/master/LICENSE)**.
