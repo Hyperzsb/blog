@@ -1,0 +1,245 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+// Apply a natural box layout model to all elements
+// from: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Base style for elements
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: $base-font;
+  color: $base-color;
+  line-height: 1.7em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 2em;
+  margin: 1em 0 16px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.6em;
+  }
+}
+
+h1, h2, h3, h5 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 20px;
+  color: $base-lighten-color;
+}
+
+h6 {
+  color: $base-lighten-color;
+}
+
+p {
+  color: $text-color;
+  margin: 1em 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover, &:active {
+    color: $link-lighten-color;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1em;
+  border-radius: 5px;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $divider-color-dark;
+  margin: 1.5em auto;
+}
+
+ol, ul {
+  list-style: none;
+
+  > li:before {
+    position: absolute;
+    width: $li-bullets-width;
+    margin-left: -$li-bullets-width;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: right;
+  }
+}
+
+ul {
+  > li:before {
+    content: "\2022";
+    padding-right: $ul-bullets-right-space;
+    font-family: $ul-bullets-font;
+    font-size: $ul-bullets-font-size;
+    line-height: $ul-bullets-font-line-height;
+  }
+}
+
+ol {
+  counter-reset: section;
+
+  > li:before {
+    counter-increment: section;
+    content: counter(section) ".";
+    padding-right: $ol-bullets-right-space;
+    font-family: $ol-bullets-font;
+    font-size: $ol-bullets-font-size;
+    line-height: $ol-bullets-font-line-height;
+  }
+}
+
+ol, ul {
+  > li {
+    margin: 0 auto $li-bottom-space $li-bullets-width;
+    line-height: $li-line-height;
+
+    > ol, > ul {
+      margin-top: $li-bottom-space;
+    }
+  }
+}
+
+li {
+  > ol, > ul {
+    > li {
+      font-size: ($li-child-size-ratio * 1em);
+      margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
+    }
+  }
+}
+
+dl {
+  list-style: none;
+}
+
+dt {
+  float: left;
+  width: $dt-width;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  clear: left;
+  text-align: right;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: $li-bottom-space;
+
+  @include mobile {
+    width: 120px;
+  }
+}
+
+dd {
+  margin-left: $dd-position;
+  margin-bottom: $li-bottom-space;
+
+  @include mobile {
+    margin-left: 140px;
+  }
+}
+
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid $table-border-color;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: .25rem .5rem;
+  border: 1px solid $table-border-color;
+}
+
+tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
+  background-color: $table-background-color;
+}
+
+blockquote {
+  quotes: none;
+  font-weight: 300;
+  padding: 0 0 0 1.4rem;
+  margin: 0 2rem 1rem 0;
+  border-left: .2em solid $blockquote-border-color;
+
+  p {
+    color: $blockquote-color;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &:before, &:after {
+    content: '';
+  }
+}
+
+q {
+  quotes: none;
+
+  &:before, &:after {
+    content: '';
+  }
+}

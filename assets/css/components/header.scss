@@ -1,0 +1,84 @@
+// Style for header
+
+@import "../variables";
+
+header {
+  height: 75%;
+}
+
+.site-info {
+  height: 85%;
+  margin: 0 auto;
+
+  .site-avatar {
+    height: 75%;
+    margin: 0 auto;
+
+    .avatar-padding {
+      height: 40%;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+    img {
+      height: 60%;
+      display: block;
+      max-width: 200px;
+      max-height: 200px;
+      margin: 0 auto;
+
+      @include mobile {
+        height: auto;
+        max-width: 120px;
+        max-height: 120px;
+      }
+    }
+
+  }
+
+  .site-name {
+    height: 15%;
+    margin: 0 auto;
+    color: $base-color;
+    cursor: pointer;
+    font-family: $base-font;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .site-description {
+    height: 10%;
+    margin: 0 auto;
+    padding: 10px;
+    color: $base-lighten-color;
+    font-size: 16px;
+  }
+
+}
+
+nav {
+  height: 15%;
+  font-family: $base-font;
+  font-weight: 500;
+
+  a {
+    margin: 0 10px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    @include mobile {
+      top: 0;
+      transform: translateY(0);
+      font-size: 16px;
+    }
+
+  }
+}

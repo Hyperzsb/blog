@@ -1,0 +1,59 @@
+// Style for tags
+
+@import "../variables";
+
+.tags {
+  h2 {
+    svg {
+      display: inline-block;
+      margin-bottom: -4px;
+      padding-right: 10px;
+      height: 24px;
+    }
+  }
+
+  .label {
+    > li {
+      margin: 0;
+      font-size: $small-font-size;
+      font-weight: 300;
+      display: inline;
+
+      &:before {
+        content: "";
+      }
+
+      > a {
+        display: inline-block;
+        margin: 1px;
+        color: $base-color;
+        background-color: $tag-index-label-background-color;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: $link-bghv-color;
+        }
+
+        span {
+          float: left;
+          padding: .5px 5px;
+
+          &.count {
+            background-color: $tag-index-count-background-color;
+            border-radius: 0 3px 3px 0;
+
+          }
+        }
+      }
+    }
+  }
+
+  .tag {
+    time {
+      color: $base-lighten-color;
+      font-size: $small-font-size;
+      font-weight: 300;
+      margin-left: 3px;
+    }
+  }
+}

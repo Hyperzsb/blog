@@ -1,0 +1,38 @@
+// Style for Archive
+@import "../variables";
+
+.archive {
+  time {
+    color: $base-lighten-color;
+    font-size: $small-font-size;
+    font-weight: 300;
+    margin-left: 3px;
+  }
+
+  h2 {
+    text-decoration: underline;
+
+    svg {
+      display: inline-block;
+      margin-bottom: -3px;
+      padding-right: 10px;
+      height: 24px;
+    }
+  }
+
+  h3 {
+    line-height: 1.5rem;
+    padding: 0 20px;
+
+    svg {
+      display: inline-block;
+      margin-bottom: -3px;
+      padding-right: 10px;
+      height: 20px;
+    }
+  }
+
+  li {
+    padding: 5px 20px;
+  }
+}
