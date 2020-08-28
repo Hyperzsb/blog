@@ -3,66 +3,55 @@ layout: default
 ---
 
 {% if site.posts.size == 0 %}
-  <h2>No post found</h2>
+<h2>No post found</h2>
 {% endif %}
 
 <div class="posts">
-  
-  {% for post in paginator.posts %}
+
+    {% for post in paginator.posts %}
     <article class="post">
+        <h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h1>
 
-      <h1>
-        <a href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a>
-      </h1>
+        <div clsss="meta">
+            <span class="author">{{ post.author }}</span>
+            <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <ul class="tag">
+                {% for tag in post.tags %}
+                <li>
+                    <a href="{{ site.url }}{{ site.baseurl }}tags#{{ tag }}">
+                        {{ tag }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
 
-      <div clsss="meta">
-        
-        <span class="author">
-          {{ post.author }}
-        </span>
-            
-        <span class="date">
-          {{ post.date | date: "%Y-%m-%d" }}
-        </span>
+        <div class="entry">
+            {{ post.excerpt | truncate: 200 }}
+        </div>
 
-        <ul class="tag">
-          {% for tag in post.tags %}
-          <li>
-            <a href="{{ site.url }}{{ site.baseurl }}tags#{{ tag }}">
-              {{ tag }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-
-      </div>
-
-      <div class="entry">
-        {{ post.excerpt | truncate: 200 }}
-      </div>
-
-      <a href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}" class="read-more">Read More</a>
-
+        <a href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}" class="read-more">Read More</a>
     </article>
-  {% endfor %}
+    {% endfor %}
 </div>
 
 {%- if paginator.previous_page or paginator.next_page -%}
 <div class="pagination">
-  {%- if paginator.previous_page -%}
+    {%- if paginator.previous_page -%}
     <span class="prev">
-      <a href="{{- site.url -}}{{- site.baseurl -}}{{- paginator.previous_page_path | remove_first: '/' -}}" class="prev">
+      <a href="{{- site.url -}}{{- site.baseurl -}}{{- paginator.previous_page_path | remove_first: '/' -}}"
+         class="prev">
         ← 上一页
       </a>
     </span>
-  {%- endif -%}
-  {%- if paginator.next_page -%}
+    {%- endif -%}
+    {%- if paginator.next_page -%}
     <span class="next">
       <a href="{{- site.url -}}{{- site.baseurl -}}{{- paginator.next_page_path | remove_first: '/' -}}" class="next">
         下一页 →
       </a>
     </span>
-  {%- endif -%}
+    {%- endif -%}
 </div>
 {%- else -%}
 <div style="padding-top: 40px;"></div>

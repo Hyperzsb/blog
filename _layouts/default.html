@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    {% if page.toc==true %}
-      <aside class="toc">
-        {% include toc.html html=content h_min=2 %}
-      </aside>
-    {% endif %}
-
-    <div id="main" role="main" class="wrapper-content">
-      <div class="container">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include analytics.html %}
-
-    <div class="wrapper-footer-mobile">
-      <footer class="footer">
-        {% include footer.html %}
-      </footer>
-    </div>
-    
-  </body>
+{% include head.html %}
+<body>
+  {% include header.html %}
 
   {% if page.toc==true %}
-  <script>
-    document.getElementById("main").classList.add("withtoc");
-  </script>
+  <aside class="toc">
+      {% include toc.html html=content h_min=2 %}
+  </aside>
   {% endif %}
+  <div id="main" role="main" class="wrapper-content">
+      <div class="container">
+          {{ content }}
+      </div>
+  </div>
 
+  {% include analytics.html %}
+
+  <div class="wrapper-footer-mobile">
+      <footer class="footer">
+          {% include footer.html %}
+      </footer>
+  </div>
+</body>
+{% if page.toc==true %}
+<script>
+    document.getElementById("main").classList.add("withtoc");
+</script>
+{% endif %}
 </html>

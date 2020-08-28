@@ -1,5 +1,6 @@
---- 
 ---
+---
+
 @import "reset";
 @import "open-color";
 @import "variables";
@@ -110,7 +111,7 @@ hr {
 // https://gist.github.com/yeun/d824fc7b04b756508f4b0143535cec30
 
 ol, ul {
-  >li {
+  > li {
     &:before {
       position: absolute;
       width: $li-bullets-width;
@@ -123,7 +124,7 @@ ol, ul {
 }
 
 ul {
-  >li:before {
+  > li:before {
     content: "\2022";
     padding-right: $ul-bullets-right-space;
     font-family: $ul-bullets-font;
@@ -135,7 +136,7 @@ ul {
 ol {
   counter-reset: section;
 
-  >li:before {
+  > li:before {
     counter-increment: section;
     content: counter(section) ".";
     padding-right: $ol-bullets-right-space;
@@ -146,20 +147,20 @@ ol {
 }
 
 ol, ul {
-  >li {
+  > li {
     margin: 0 auto $li-bottom-space $li-bullets-width;
     line-height: $li-line-height;
 
-    >ol,
-    >ul {
+    > ol,
+    > ul {
       margin-top: $li-bottom-space;
     }
   }
 }
 
 li {
-  >ol, >ul {
-    >li {
+  > ol, > ul {
+    > li {
       font-size: ($li-child-size-ratio * 1em);
       margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
     }
@@ -270,13 +271,15 @@ img {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;     
+  width: 5px;
   height: 1px;
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: $base-lightener-color;
 }
+
 ::-webkit-scrollbar-track {
   border-radius: 10px;
   background: $background-color;
@@ -288,7 +291,7 @@ img {
 .page {
   padding-bottom: 45px;
 
-  h1{
+  h1 {
     svg {
       display: inline-block;
       margin-bottom: -3px;
@@ -296,7 +299,7 @@ img {
       height: 30px;
     }
   }
- }
+}
 
 // Sidebar
 .wrapper-sidebar {
@@ -374,7 +377,7 @@ header {
     color: $base-lighten-color;
     font-size: 16px;
   }
-  
+
 }
 
 nav {
@@ -504,7 +507,7 @@ footer {
       display: inline;
       margin: 0;
 
-      >a {
+      > a {
         margin: 3px 3px 3px 0;
         padding: .5px 4px;
         color: $base-color;
@@ -520,12 +523,12 @@ footer {
   }
 }
 
-.posts>.post {
+.posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $divider-color;
 }
 
-.posts>.post:last-child {
+.posts > .post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
 }
@@ -566,7 +569,7 @@ footer {
     a {
       color: $base-color;
     }
-  
+
     a:hover {
       color: $link-color;
     }
@@ -634,7 +637,7 @@ footer {
     padding: 27px 0 20px;
   }
 
-  >.prev {
+  > .prev {
     float: left;
     width: 50%;
 
@@ -653,7 +656,7 @@ footer {
     }
   }
 
-  >.next {
+  > .next {
     float: right;
     text-align: right;
     width: 50%;
@@ -685,7 +688,7 @@ footer {
 
   h2 {
     text-decoration: underline;
-    
+
     svg {
       display: inline-block;
       margin-bottom: -3px;
@@ -712,7 +715,7 @@ footer {
 }
 
 // Tags
-.tags{
+.tags {
   h2 {
     svg {
       display: inline-block;
@@ -723,35 +726,35 @@ footer {
   }
 
   .label {
-    >li:before {
+    > li:before {
       content: "";
     }
-  
-    >li {
+
+    > li {
       margin: 0;
       font-size: $small-font-size;
       font-weight: 300;
       display: inline;
-  
-      >a {
+
+      > a {
         display: inline-block;
         margin: 1px;
         color: $base-color;
         background-color: $tag-index-label-background-color;
         border-radius: 3px;
-  
+
         &:hover {
           background-color: $link-bghv-color;
         }
-  
+
         span {
           float: left;
           padding: .5px 5px;
-  
+
           &.count {
             background-color: $tag-index-count-background-color;
             border-radius: 0 3px 3px 0;
-  
+
           }
         }
       }
