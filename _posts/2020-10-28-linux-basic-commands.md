@@ -517,3 +517,55 @@ toc: true
     ```
 
     
+
+## 常用工具
+
+### 压缩 / 解压缩
+
+- .zip
+
+  - 压缩
+
+    ```shell
+    $ zip demo.zip ./demo_a ./demo_b
+    ```
+
+  - 解压
+
+    ```shell
+    $ unzip demo.zip
+    ```
+
+  > 更多参数请参考相关命令说明手册
+
+- .tar
+
+  - 压缩
+
+    ```shell
+    $ tar -cvf demo.tar ./demo_a ./demo_b
+    ```
+
+  - 解压
+
+    ```shell
+    $ tar -xvf demo.tar
+    ```
+
+  > 更多参数请参考相关命令说明手册
+
+- tar.gz
+
+  - 压缩
+
+    ```shell
+    $ tar -zcvf demo.tar.gz ./demo_a ./demo_b
+    ```
+
+  - 解压
+
+    ```shell
+    $ tar -zxvf demo.tar.gz
+    ```
+
+  > 更多参数请参考相关命令说明手册
