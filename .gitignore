@@ -7,5 +7,6 @@ _site/
 _site/
 # Files
 *~
+.DS_Store
 Gemfile
 Gemfile.lock
