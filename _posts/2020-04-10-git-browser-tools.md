@@ -3,7 +3,7 @@ layout: post
 title: Git - 浏览器插件
 date: 2020-04-10
 Author: Hyperzsb
-tags: [git, tool]
+tags: [git, tools]
 comments: true
 toc: true
 ---

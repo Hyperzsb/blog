@@ -3,7 +3,7 @@ layout: post
 title: GnuPG - 指南
 date: 2020-04-13
 Author: Hyperzsb
-tags: [encrypt, tool]
+tags: [encrypt, tools]
 comments: true
 toc: true
 ---
