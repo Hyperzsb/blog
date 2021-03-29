@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git - LibreSSL SSL_connect: SSL_ERROR_SYSCALL 错误解决
+title: Git - SSL_ERROR_SYSCALL 问题解决
 date: 2021-03-29
 Author: Hyperzsb
 tags: [git]
