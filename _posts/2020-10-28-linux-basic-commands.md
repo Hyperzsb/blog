@@ -516,7 +516,7 @@ toc: true
         |__ Port 1: Dev 2, If 0, Class=Human Interface Device, Driver=usbhid, 12M
     ```
 
-    
+---
 
 ## 常用工具
 
@@ -569,3 +569,60 @@ toc: true
     ```
 
   > 更多参数请参考相关命令说明手册
+
+### 图片处理
+
+Linux 平台有很多用于处理图片的工具，例如`ImageMagick`、`jpegoptim` 和 `pngcrush` 等。这里主要介绍 `ImageMagick` 的用法。
+
+- ImageMagick 介绍：
+
+  - [ImageMagick 官网](https://imagemagick.org/script/index.php)
+  - 使用 ImageMagick 的创建，编辑，撰写，或转换位图图像。它可以读取和写入各种格式（超过200种）的图像，包括 PNG，JPEG，GIF，HEIC，TIFF，DPX，EXR，WebP，Postscript，PDF 和 SVG。使用ImageMagick可以调整图像大小，翻转，镜像，旋转，变形，剪切和变换图像，调整图像颜色，应用各种特殊效果或绘制文本，线条，多边形，椭圆和贝塞尔曲线。
+
+- ImageMagick 安装：
+
+  - 本地 apt 安装：
+
+    ```shell
+    $ apt install imagemagick
+    ```
+
+  - 官网下载即用型二进制文件：
+
+    ```shell
+    $ wget https://download.imagemagick.org/ImageMagick/download/binaries/magick
+    ```
+
+  > 注意：由于 apt 安装的 ImageMagick 版本为7以下版本，故不支持 `magick` 命令，依旧需要使用诸如 `convert`、`identify` 和 `animate` 等字命令来进行工作
+
+- ImageMagick 样例：
+
+  - 转换格式：
+
+    ```shell
+    $ convert xxx.jpeg xxx.png
+    ```
+
+  - 压缩图片：
+
+    ```sh
+    # 将图片像素改为1920*1080
+    $ convert -resize 1920x1080 xxx.jpeg xxx.jpeg
+    # 将图片压缩为原来的50%*50%
+    $ convert -sample 50%x50% xxx.jpeg xxx.jpeg
+    # 使用 -quality 参数控制压缩图片的质量，参数值可以是0～100之间的任意数
+    $ convert -resize 500x500 -quality 75 xxx.jpeg xxx.jpeg
+    ```
+
+  - 批量压缩图片：
+
+    ```shell
+    # 压缩当前目录下所有后缀名包含在列表中的图片
+    $ find ./ -regex '.*\(jpg\|JPG\|png\|PNG\|jpeg\)' -size +50k -exec convert -resize 100x100 {} {} \;
+    ```
+
+---
+
+## 参考
+
+- [Linux 图片批量压缩工具 ImageMagick](https://blog.csdn.net/qq_38228582/article/details/104836907)
