@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: Jenkins - 安装配置（阿里云）
 date: 2020-07-03
@@ -28,8 +29,6 @@ Jenkins 支持多种安装方式，一下给出常用的两种安装方式流程
 - Docker 安装
 
 > 还有通过 jar 包、 war 包进行安装的方式，其具体流程详询[ Jenkins 官网](https://www.jenkins.io/)以及相关博客。
-
-
 
 ### Linux 本地安装
 
@@ -95,8 +94,6 @@ Jenkins 支持多种安装方式，一下给出常用的两种安装方式流程
 - 不需要 Docker 相关的知识，使用较为方便。
 
 - **可以直接操作宿主机文件系统，可以直接执行宿主机上的脚本，方便编译打包和部署。**（当然由于权限问题的存在，这个优势可能会受到限制）
-
-
 
 ### Docker 安装
 
@@ -268,24 +265,40 @@ Jenkins 支持多种安装方式，一下给出常用的两种安装方式流程
 
 ### 插件配置
 
-1. Blue Ocean：
+1. [Blue Ocean](https://plugins.jenkins.io/blueocean)：
 
-   > Blue Ocean UI 很漂亮，也是进行多分支流水线开发的利器。若默认没有安装 Blue Ocean ，可以安装该插件。
+   Blue Ocean UI 很漂亮，也是进行多分支流水线开发的利器。若默认没有安装 Blue Ocean ，可以安装该插件。
 
-   - Blue Ocean
+2. [Embeddable Build Status Plugin](https://plugins.jenkins.io/embeddable-build-status)：
 
-2. Docker：
+   该插件可以生成 build 状态 badge，可以将其嵌入到 GitHub 仓库的 README 文件中，用来显示构建状态。
 
-   > 如果在流水线中需要进行 Docker 镜像的运行、打包和部署，则需要安装 Docker 相关插件。
+3. Docker：
 
-   - Docker plugin
-   - Docker Pipeline
+   如果在流水线中需要进行 Docker 镜像的运行、打包和部署，则需要安装 Docker 相关插件：
 
-3. SSH：
+   - [Docker plugin](https://plugins.jenkins.io/docker-plugin)
+   - [Docker Pipeline](https://plugins.jenkins.io/docker-workflow)
 
-   >如果在流水线中需要连接远程主机（包括在 Jenkins 容器中访问宿主机），则需要安装 SSH 相关插件。
+4. [Localization: Chinese (Simplified)](https://plugins.jenkins.io/localization-zh-cn)：
 
-   - SSH plugin
+   由官方维护的简体中文语言包。
+
+5. [Role-based Authorization Strategy](https://plugins.jenkins.io/role-strategy)：
+
+   该插件可以使用角色对象模型实现对 Jenkins 的权限管理和账号权限分配等功能，十分强大。
+
+6. [SSH plugin](https://plugins.jenkins.io/ssh)：
+
+   如果在流水线中需要连接远程主机（包括在 Jenkins 容器中访问宿主机），则需要安装 SSH 相关插件。
+
+7. [Timestamper](https://plugins.jenkins.io/timestamper)：
+
+   该插件可以在控制台输出中加入时间戳。
+
+8. [Workspace Cleanup Plugin](https://plugins.jenkins.io/ws-cleanup)：
+
+   该插件可以用来清理每次构建后的工作区。
 
 ### SSH 配置
 
@@ -326,6 +339,36 @@ Jenkins 支持多种安装方式，一下给出常用的两种安装方式流程
 ```java
 System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Shanghai')
 ```
+
+
+
+---
+
+## Jenkins 使用技巧
+
+### 删除状态为中止或失败的构建
+
+在我们进行构建是，往往会产生被我们手动中止的（ABORTED）和失败的（FAILURE）的构建，这些构建往往会占据一定磁盘空间，并影响我们定位到关键构建，这时我们就需要将其进行删除。
+
+但是手动删除每一个构建往往不是一个聪明的选择。幸运的是，Jenkins 为我们提供了通过编程来自动完成这一工作的接口。
+
+> Type in an arbitrary [Groovy script](http://www.groovy-lang.org/) and execute it on the server. Useful for trouble-shooting and diagnostics. 
+
+1. 进入脚本命令行界面：
+
+   Jenkisn Homepage :arrow_right: Manage Jenkins :arrow_right: Script Console
+
+2. 输入以下命令并运行：
+
+   ```groovy
+   def jobName = "your-job-name"
+   def statusToDelete = "ABORTED"
+    
+   Jenkins.instance.getItemByFullName(jobName).builds.each {
+     if(it.getResult().toString().equals(statusToDelete))
+     	it.delete();
+   }
+   ```
 
 
 
