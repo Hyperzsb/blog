@@ -33,7 +33,7 @@ fatal: unable to access 'https://github.com/xxx/xxx.git/': LibreSSL SSL_connect:
 
 ---
 
-## 解决方案
+## 虚假的解决方案
 
 经过查阅各方资料，发现这个问题并非一个少见的问题，有大量的 Git 用户（尤其是 macOS 用户）遇到了这个问题，还有一些用户在使用 Gem 等工具时也出现了同样的问题。
 
@@ -96,13 +96,78 @@ $ networksetup -setv6automatic Wi-Fi
 
 ---
 
+## 真正的解决方案
+
+> 更新于 2021.07.11
+
+之前试了这么多网上的方法，其实都没有找到问题的症结，实在是汗颜。其实这个问题的根本原因在于国内网络环境对于境外服务器的种种限制，只用解决这一问题才能真正意义上解决 GitHub push/pull 网络错误的问题。根据使用的 GitHub 连接方式不同，针对 HTTPS 和 SSH 各有一种方法。
+
+### HTTPS 和 SSH 方法的对比
+
+就一般的环境而言，这两种方法并没有什么区别；但是在配置了防火墙或代理的服务器环境中，SSH 方式可能会收到限制。
+
+> 根据 GitHub 官方文档：
+>
+> - You can work with all repositories on GitHub over HTTPS, even if you are behind a firewall or proxy.
+> - You can work with all repositories on GitHub over SSH, although firewalls and proxys might refuse to allow SSH connections.
+
+幸运的是，在仅有防火墙端口限制的情况下，现在可以通过 HTTPS 的端口使用 SSH 方式连接 GitHub 服务器，具体方式请参阅 [Using SSH over the HTTPS port](https://docs.github.com/en/github/authenticating-to-github/troubleshooting-ssh/using-ssh-over-the-https-port)。
+
+### 使用 HTTPS 代理
+
+在使用 HTTPS 连接 GitHub 进行 push/pull 时（即 origin 地址为 https://github.com/xxx/xxx.git），需要更改本地 git 的配置，使用代理向 GitHub 发起请求。
+
+> 要求：你需要有一个梯子，关于如何获取梯子，可以参考[我的收藏](https://blog.hyperzsb.tech/collections/)中关于 VPN 的章节。
+
+执行如下命令：
+
+```shell
+$ git config --global -e
+```
+
+这将进入 git 的配置文件编辑界面（将使用 git 指定的默认编辑器打开）。
+
+在该文件中加入如下内容：
+
+```
+[http]
+        proxy = socks5://127.0.0.1:7891
+[https]
+        proxy = socks5://127.0.0.1:7891
+```
+
+其中“7891”为你的代理软件的指定出入端口，请根据实际情况自行修改。
+
+> 该方法对我有效
+
+### 使用 SSH
+
+众所周知在 clone GitHub 仓库时可以使用 HTTPS 或者 SSH 进行 clone，而 SSH 却没有 HTTPS 的网络连接问题，所以可以将 push/pull 的连接方式由 HTTPS 改为 SSH。
+
+> 要求：你需要提前生成 SSH 公私钥对，并将公钥添加到你的 GitHub 账户中。关于这一部分的详细信息，请参阅 [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)。
+
+进入仓库对应目录，执行如下命令：
+
+```shell
+$ git remote set-url origin git@github.com:xxx/xxx.git
+```
+
+更改完成后，可以使用如下命令查看当前的 origin 地址：
+
+```shell
+$ git remote -v
+```
+
+> 该方法对我有效。强烈建议使用该方法，简单有效。
+
 ## 结论
 
-再试了很多方式之后，只有第三种起了作用，但是问题的解决是否是由于同时使用了多个解决方案，还难有定论。希望可以在将来彻底解决这一问题。
+所以说，有的时候网上的解决方案并不一定能解决自己的问题，还需要进行深入的研究和发掘。
 
 ---
 
 ## 参考
 
 - [SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443](https://stackoverflow.com/questions/48987512/ssl-connect-ssl-error-syscall-in-connection-to-github-com443)
+- [Switching remote URLs from HTTPS to SSH](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh)
 
