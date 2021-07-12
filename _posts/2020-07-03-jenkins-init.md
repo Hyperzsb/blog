@@ -273,30 +273,38 @@ Jenkins 支持多种安装方式，一下给出常用的两种安装方式流程
 
    该插件可以生成 build 状态 badge，可以将其嵌入到 GitHub 仓库的 README 文件中，用来显示构建状态。
 
-3. Docker：
+3. [Dark Theme](https://plugins.jenkins.io/dark-theme/)：
+
+   该插件可以提供随系统变化的暗色主题（主题风格类似于 GitHub）。
+
+4. Docker：
 
    如果在流水线中需要进行 Docker 镜像的运行、打包和部署，则需要安装 Docker 相关插件：
 
    - [Docker plugin](https://plugins.jenkins.io/docker-plugin)
    - [Docker Pipeline](https://plugins.jenkins.io/docker-workflow)
 
-4. [Localization: Chinese (Simplified)](https://plugins.jenkins.io/localization-zh-cn)：
+5. [Job Configuration History](https://plugins.jenkins.io/jobConfigHistory/)：
+
+   该插件可以为你的传统流水线配置提供一定的版本控制功能，方便你在对流水线配置做出错误改变后回滚到之前的版本。
+
+6. [Localization: Chinese (Simplified)](https://plugins.jenkins.io/localization-zh-cn)：
 
    由官方维护的简体中文语言包。
 
-5. [Role-based Authorization Strategy](https://plugins.jenkins.io/role-strategy)：
+7. [Role-based Authorization Strategy](https://plugins.jenkins.io/role-strategy)：
 
    该插件可以使用角色对象模型实现对 Jenkins 的权限管理和账号权限分配等功能，十分强大。
 
-6. [SSH plugin](https://plugins.jenkins.io/ssh)：
+8. [SSH plugin](https://plugins.jenkins.io/ssh)：
 
    如果在流水线中需要连接远程主机（包括在 Jenkins 容器中访问宿主机），则需要安装 SSH 相关插件。
 
-7. [Timestamper](https://plugins.jenkins.io/timestamper)：
+9. [Timestamper](https://plugins.jenkins.io/timestamper)：
 
    该插件可以在控制台输出中加入时间戳。
 
-8. [Workspace Cleanup Plugin](https://plugins.jenkins.io/ws-cleanup)：
+10. [Workspace Cleanup Plugin](https://plugins.jenkins.io/ws-cleanup)：
 
    该插件可以用来清理每次构建后的工作区。
 
