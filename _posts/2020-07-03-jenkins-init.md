@@ -376,7 +376,7 @@ System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Shanghai'
 
 ## Jenkins 常见问题
 
-关于更多的 Jenkins 的常见问题及 Issue，请参阅 [官方 Issue 列表](https://issues.jenkins.io/)。
+关于更多的 Jenkins 的常见问题及 Issue，请参阅[官方 Issue 列表](https://issues.jenkins.io/)。
 
 ### 设置 GitHub BuildStatus 时抛出异常
 
@@ -428,6 +428,26 @@ Build step 'Set GitHub commit status (universal)' marked build as failure
 
 更新 Token Macro 插件。
 
+### Error 403 No valid crumb was included in the request
+
+#### Jenkins 版本
+
+该问题应该同版本关系不大
+
+#### 报错信息
+
+在进行表单提交时，会出现 HTTPS 403 错误，具体内容如下：
+
+```
+Error 403 No valid crumb was included in the request
+```
+
+#### 解决方式
+
+>  如果你的 Jenkins 部署在反向代理服务器之后，该方法可能会解决你的问题；如果不是，请参阅[官方 Issue 列表](https://issues.jenkins.io/)。
+
+在 `系统管理` -> `全局安全配置` -> `跨站请求伪造保护` 选项卡下，勾选`启用代理兼容`，即可解决这一问题。
+
 
 
 ---
@@ -436,5 +456,6 @@ Build step 'Set GitHub commit status (universal)' marked build as failure
 
 - [ Jenkins 官方中文文档](https://www.jenkins.io/zh/doc/book/)
 - [ Jenkins 官方英文文档](https://www.jenkins.io/doc/book/)
+-  [Jenkins 官方 Issue 列表](https://issues.jenkins.io/)
 - [jenkins如何配置ssh服务器](https://blog.csdn.net/liujingqiu/article/details/58584559)
 - [永久修改以容器化方式运行的Jenkins系统时间](https://www.jianshu.com/p/47d767cf893d)
