@@ -1,15 +1,15 @@
 ---
 
 layout: post
-title: Jenkins - 安装配置（阿里云）
+title: Jenkins - 安装配置
 date: 2020-07-03
 Author: Hyperzsb
-tags: [jenkins, docker, ci&cd, cloud]
+tags: [jenkins, docker, ci&cd]
 comments: true
 toc: true
 ---
 
-装完了 Docker ，接下来安装 Jenkins 。Jenkins 是一个成熟的 CI&CD 套件，详询**[ Jenkins 官网](https://www.jenkins.io/)**。
+在 DevOps 蓬勃发展的今天，持续继承和持续部署已经成为成熟项目中不可或缺的一部分。在种种的 DevOps 工具中，Jenkins 是一个成熟的 CI&CD 套件，可以帮助我们完成绝大多数的任务。关于 Jenkins 的详细信息，请参阅**[ Jenkins 官网](https://www.jenkins.io/)**。
 
 <!-- more -->
 
@@ -369,6 +369,64 @@ System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Shanghai'
      	it.delete();
    }
    ```
+
+
+
+---
+
+## Jenkins 常见问题
+
+关于更多的 Jenkins 的常见问题及 Issue，请参阅 [官方 Issue 列表](https://issues.jenkins.io/)。
+
+### 设置 GitHub BuildStatus 时抛出异常
+
+#### Jenkins 版本
+
+该问题集中在 2.271.1 之后的版本。
+
+#### 报错信息
+
+```
+ERROR: Build step failed with exception
+java.lang.IllegalStateException
+	at org.objectweb.asm.tree.analysis.BasicInterpreter.<init>(BasicInterpreter.java:66)
+	at org.parboiled.transform.RuleMethodInterpreter.<init>(RuleMethodInterpreter.java:42)
+	at org.parboiled.transform.InstructionGraphCreator.process(InstructionGraphCreator.java:41)
+	at org.parboiled.transform.ParserTransformer.runMethodTransformers(ParserTransformer.java:62)
+	at org.parboiled.transform.ParserTransformer.extendParserClass(ParserTransformer.java:45)
+	at org.parboiled.transform.ParserTransformer.transformParser(ParserTransformer.java:39)
+	at org.parboiled.Parboiled.createParser(Parboiled.java:54)
+Caused: java.lang.RuntimeException: Error creating extended parser class: null
+	at org.parboiled.Parboiled.createParser(Parboiled.java:58)
+	at org.jenkinsci.plugins.tokenmacro.Parser.process(Parser.java:80)
+	at org.jenkinsci.plugins.tokenmacro.Parser.process(Parser.java:74)
+	at org.jenkinsci.plugins.tokenmacro.TokenMacro.expand(TokenMacro.java:199)
+	at org.jenkinsci.plugins.tokenmacro.TokenMacro.expandAll(TokenMacro.java:237)
+	at org.jenkinsci.plugins.tokenmacro.TokenMacro.expandAll(TokenMacro.java:211)
+	at org.jenkinsci.plugins.github.common.ExpandableMessage.expandAll(ExpandableMessage.java:52)
+	at org.jenkinsci.plugins.github.status.sources.ConditionalStatusResultSource.get(ConditionalStatusResultSource.java:56)
+	at org.jenkinsci.plugins.github.status.sources.DefaultStatusResultSource.get(DefaultStatusResultSource.java:54)
+	at org.jenkinsci.plugins.github.status.GitHubCommitStatusSetter.perform(GitHubCommitStatusSetter.java:141)
+Caused: org.jenkinsci.plugins.github.common.CombineErrorHandler$ErrorHandlingException
+	at org.jenkinsci.plugins.github.common.CombineErrorHandler.handle(CombineErrorHandler.java:74)
+	at org.jenkinsci.plugins.github.status.GitHubCommitStatusSetter.perform(GitHubCommitStatusSetter.java:164)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:80)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:803)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:752)
+	at hudson.model.Build$BuildExecution.post2(Build.java:177)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:697)
+	at hudson.model.Run.execute(Run.java:1931)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+Build step 'Set GitHub commit status (universal)' marked build as failure
+```
+
+#### 解决方式
+
+更新 Token Macro 插件。
 
 
 
