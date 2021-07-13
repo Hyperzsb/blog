@@ -621,6 +621,24 @@ Linux 平台有很多用于处理图片的工具，例如`ImageMagick`、`jpegop
     $ find ./ -regex '.*\(jpg\|JPG\|png\|PNG\|jpeg\)' -size +50k -exec convert -resize 100x100 {} {} \;
     ```
 
+### 远程连接
+
+- SSH 连接远程主机：
+
+  ```shell
+  $ ssh root@112.113.114.115 # 以 root 用户身份登陆 112.113.114.115 IP 对应的远程主机
+  $ ssh user@myhost.com # 以 user 用户身份登陆 myhost.com 域名对应的远程主机
+  ```
+
+- 向（从）远程主机复制文件：
+
+  ```shell
+  $ scp ~/myfile.txt root@112.113.114.115:/root/CopyFiles/ # 将本机主目录下的 myfile.txt 复制到以 root 身份登陆的 112.113.114.115 IP 对应的远程主机的 /root/CopyFiles/ 目录下
+  $ scp user@myhost.com:/home/user/myfile.txt ~/CopyFiles/ # 将以 root 身份登陆的 112.113.114.115 IP 对应的远程主机的 /home/user/myfile.txt 复制到本机主目录的 CopyFiles 目录下
+  ```
+
+  
+
 ---
 
 ## 参考
