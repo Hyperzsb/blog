@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Docker - 安装配置（阿里云）
+title: Docker - 安装配置
 date: 2020-06-29
 Author: Hyperzsb
-tags: [docker, cloud]
+tags: [docker]
 comments: true
 toc: true
 ---
@@ -22,8 +22,6 @@ toc: true
 
 **流程基本上同[ Docker 官方文档](https://docs.docker.com/engine/install)中给出的一致，对于一些安装细节进行了进一步的说明。**
 
-
-
 ### Docker 系统要求
 
 > 仅以 Ubuntu 为例
@@ -41,8 +39,6 @@ toc: true
 - armhf
 - arm64
 
-
-
 ### 卸载旧版本 Docker
 
 之前的Docker发行版名称有`docker`、`docker.io`和`docker-engine`，为保证使用最新版本的 Docker ，可以将旧版卸载：
@@ -50,8 +46,6 @@ toc: true
 ```shell
 $ sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
-
-
 
 ### 安装新版本 Docker
 
@@ -164,8 +158,6 @@ $ sudo apt-get remove docker docker-engine docker.io containerd runc
 ## Docker 配置流程
 
 由于 Docker 的默认配置有时不能满足我们实际开发需求，需要进行进一步的自定义配置。
-
-
 
 ### Docker 国内源加速
 
