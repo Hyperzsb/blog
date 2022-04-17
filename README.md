@@ -1,12 +1,12 @@
 # Hyperzsb's Personal Blog
 
+**⚠️ Note: this blog site has been deprecated and the repo has been archived. The new blog site based on [natalia-theme](https://github.com/Hyperzsb/natalia-theme) can be accessed via [here](https://hyperzsb.io).**
+
 A blog and introduction website for Hyperzsb.
 
 **Please view at [Hyperzsb's Ideas](https://blog.hyperzsb.tech/).**
 
 **Generated based on [LOFFER](https://fromendworld.github.io/LOFFER/document/), but abundance of changes have been made.**
-
-
 
 ## What's new
 
